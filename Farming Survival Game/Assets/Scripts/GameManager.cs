@@ -4,16 +4,42 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private enum GameState
+    {
+        Menu,
+        Play,
+        Pause,
+        Death
+    }
+    [SerializeField] GameObject DeadScreen, PausePanel, MenuPanel;
+    private GameState CurrState;
+    private GameState TempState;
     void Start()
     {
-        
+        SetState(GameState.Menu);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetKeyDown(KeyCode.Escape))
+            if(!PausePanel.GetComponent<PausePanel>().OnTrigger())
+            {
+                TempState = CurrState;
+                SetState(GameState.Pause);
+            }
+            else SetState(TempState);
+
+    }
+
+    private void SetState(GameState State)
+    {
+        CurrState = State;
+
+        DeadScreen.SetActive(State == GameState.Death);
+        PausePanel.SetActive(State == GameState.Pause);
+        MenuPanel.SetActive(State == GameState.Menu);
+
     }
 }
 

@@ -41,8 +41,8 @@ public class PausePanel : MonoBehaviour
 
     public bool OnTrigger()
     {
-       Trigger = !Trigger;
-       return !Trigger;
+        Trigger = !Trigger;
+        return !Trigger;
 
     }
 }

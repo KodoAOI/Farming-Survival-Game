@@ -28,18 +28,24 @@ public class GameManager : MonoBehaviour
                 TempState = CurrState;
                 SetState(GameState.Pause);
             }
-            else SetState(TempState);
+            else 
+            {
+                SetState(TempState);
+            }
 
     }
 
     private void SetState(GameState State)
     {
-        CurrState = State;
-
-        DeadScreen.SetActive(State == GameState.Death);
-        PausePanel.SetActive(State == GameState.Pause);
-        MenuPanel.SetActive(State == GameState.Menu);
-
+        if(State == GameState.Pause)
+            PausePanel.SetActive(true);
+        else
+        {
+            CurrState = State;
+            PausePanel.SetActive(false);
+            DeadScreen.SetActive(State == GameState.Death);
+            MenuPanel.SetActive(State == GameState.Menu);
+        }
     }
 }
 

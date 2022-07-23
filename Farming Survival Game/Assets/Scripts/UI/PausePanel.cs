@@ -22,14 +22,9 @@ public class PausePanel : MonoBehaviour
     [ContextMenu("update")]
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.S))
+        if(Input.anyKeyDown)
         {
-            NumberSelect += 1;
-            Changed = true;
-        }
-        else if(Input.GetKeyDown(KeyCode.W))
-        {
-            NumberSelect -= 1;
+            NumberSelect -= (int)Input.GetAxisRaw("Vertical");
             Changed = true;
         }
         if(Changed)

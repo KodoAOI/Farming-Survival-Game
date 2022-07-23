@@ -5,13 +5,12 @@ using UnityEngine.UI;
 using UnityEngine;
 using TMPro;
 
-public class PausePanel : MonoBehaviour
+public class DeadScreen : MonoBehaviour
 {
     [SerializeField] private Color ColorSelect;
     [SerializeField] private ButtonController[] Buttons;
     private int NumberSelect;
     private bool Changed = true; // Check if need to update
-    private bool Trigger = false;
     void Start()
     {
         NumberSelect = 0;
@@ -37,12 +36,5 @@ public class PausePanel : MonoBehaviour
             }
             Changed = false;
         }
-    }
-
-    public bool OnTrigger()
-    {
-       Trigger = !Trigger;
-       return !Trigger;
-
     }
 }

@@ -7,10 +7,17 @@ using TMPro;
 public class Scroller : MonoBehaviour
 {
     [SerializeField] private Transform[] m_SpawnPoint;
-    [SerializeField] private Image[] m_Image;
-    private int Index1, Index2;
+    [SerializeField] private CloudMenuBackground[] m_Clouds;
+    private float RealTime, StartTime;
+    void Start()
+    {
+        foreach(CloudMenuBackground i in m_Clouds)
+        {
+            i.CallInit();
+        }
+    }
     void Update()
     {
-        
+
     }
 }

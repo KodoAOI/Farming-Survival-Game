@@ -401,8 +401,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_SpawnPoint: {fileID: 1001048035}
-  LifeTime: 30
-  m_CloudMoveSpeed: 1
+  LifeTime: 60
+  m_CloudMoveSpeed: 0.5
   WakeTime: 0
 --- !u!212 &269721085
 SpriteRenderer:
@@ -1274,7 +1274,7 @@ SpriteRenderer:
   m_Size: {x: 0.15, y: 0.21}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &1057887300
@@ -1475,6 +1475,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_direction: {x: 1, y: 0}
   m_MoveSpeed: 0.2
+  m_WakeTime: 0
+  m_SpawnPoint: {fileID: 0}
 --- !u!95 &1371822076
 Animator:
   serializedVersion: 4
@@ -1921,9 +1923,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_SpawnPoint: {fileID: 1001048035}
-  LifeTime: 30
-  m_CloudMoveSpeed: 1
-  WakeTime: 15
+  LifeTime: 60
+  m_CloudMoveSpeed: 0.5
+  WakeTime: 30
 --- !u!212 &1602703787
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2022,8 +2024,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_SpawnPoint: {fileID: 116681796}
-  LifeTime: 22.5
-  m_CloudMoveSpeed: 1.5
+  LifeTime: 40
+  m_CloudMoveSpeed: 0.75
   WakeTime: 0
 --- !u!212 &1662745505
 SpriteRenderer:
@@ -2366,9 +2368,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_SpawnPoint: {fileID: 116681796}
-  LifeTime: 22.5
-  m_CloudMoveSpeed: 1.5
-  WakeTime: 7
+  LifeTime: 40
+  m_CloudMoveSpeed: 0.75
+  WakeTime: 15
 --- !u!212 &1804351145
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2778,6 +2780,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_direction: {x: -1, y: 0}
   m_MoveSpeed: 0.25
+  m_WakeTime: 0
+  m_SpawnPoint: {fileID: 0}
 --- !u!95 &1965803318
 Animator:
   serializedVersion: 4

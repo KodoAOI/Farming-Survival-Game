@@ -24,11 +24,13 @@ public class MenuPanel : MonoBehaviour
         if(Input.anyKeyDown)
         {
             MenuNumberSelect -= (int)Input.GetAxisRaw("Vertical");
-            int Temp = Math.Abs((int)Input.GetAxisRaw("Horizontal") * Buttons.Length/2);
+            int Temp = (int)Input.GetAxisRaw("Horizontal") * Buttons.Length/2;
             
             if(MenuNumberSelect < Buttons.Length/2)
-                MenuNumberSelect += Temp;
-            else if(MenuNumberSelect >= Buttons.Length/2) MenuNumberSelect -= Temp;
+                if(Temp > 0)MenuNumberSelect += Temp;
+                else {}
+            else if(MenuNumberSelect >= Buttons.Length/2) 
+                if(Temp < 0)MenuNumberSelect += Temp;
             Changed = true;
         }
         if(Changed)

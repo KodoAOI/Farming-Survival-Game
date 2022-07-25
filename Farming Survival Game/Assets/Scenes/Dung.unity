@@ -412,7 +412,7 @@ GameObject:
   - component: {fileID: 108675328}
   - component: {fileID: 108675327}
   m_Layer: 0
-  m_Name: QuitButton
+  m_Name: CloseButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1422,7 +1422,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85f188f89f55ee3488333b1db8b24fc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DefaultColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &223940528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3597,7 +3596,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85f188f89f55ee3488333b1db8b24fc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DefaultColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &578194745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4077,7 +4075,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85f188f89f55ee3488333b1db8b24fc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DefaultColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &695160767
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4661,7 +4658,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85f188f89f55ee3488333b1db8b24fc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DefaultColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &748612157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5814,7 +5810,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85f188f89f55ee3488333b1db8b24fc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DefaultColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &875112482
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7074,7 +7069,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85f188f89f55ee3488333b1db8b24fc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DefaultColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &1150511531
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8096,7 +8090,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85f188f89f55ee3488333b1db8b24fc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DefaultColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &1362330795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9566,7 +9559,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85f188f89f55ee3488333b1db8b24fc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DefaultColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &1593633110
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11793,7 +11785,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85f188f89f55ee3488333b1db8b24fc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DefaultColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &1914523781
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12263,14 +12254,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 80812b66c04889e47b3eda29375b8c18, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MenuColorSelect: {r: 1, g: 1, b: 1, a: 0}
-  Buttons:
-  - {fileID: 875112481}
-  - {fileID: 578194744}
-  - {fileID: 1593633109}
-  - {fileID: 1362330794}
-  - {fileID: 1914523780}
-  - {fileID: 748612156}
 --- !u!114 &2078307394
 MonoBehaviour:
   m_ObjectHideFlags: 0

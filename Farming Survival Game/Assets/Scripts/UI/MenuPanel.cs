@@ -1,18 +1,47 @@
+using System.Globalization;
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
+using TMPro;
 
 public class MenuPanel : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] private Color MenuColorSelect;
+    [SerializeField] private ButtonController[] Buttons;
+    private int MenuNumberSelect;
+    private bool Changed = true; // Check if need to update
+    // private bool Trigger = false;
     void Start()
     {
-        
+        MenuNumberSelect = 0;
+        MenuColorSelect.a = 1;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if(Input.anyKeyDown)
+        {
+            MenuNumberSelect -= (int)Input.GetAxisRaw("Vertical");
+            int Temp = Math.Abs((int)Input.GetAxisRaw("Horizontal") * Buttons.Length/2);
+            
+            if(MenuNumberSelect < Buttons.Length/2)
+                MenuNumberSelect += Temp;
+            else if(MenuNumberSelect >= Buttons.Length/2) MenuNumberSelect -= Temp;
+            Changed = true;
+        }
+        if(Changed)
+        {
+            MenuNumberSelect = Math.Max(MenuNumberSelect, 0);
+            MenuNumberSelect = Math.Min(MenuNumberSelect, Buttons.Length - 1);
+            for(int i = 0; i < Buttons.Length; i++)
+            {
+                Color color = Buttons[i].DefaultColor;
+                if(i == MenuNumberSelect)color = MenuColorSelect;
+                Buttons[i].SetTextColor(color);
+            }
+            Changed = false;
+        }
     }
 }

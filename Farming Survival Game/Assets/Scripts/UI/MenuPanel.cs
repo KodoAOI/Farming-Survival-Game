@@ -10,6 +10,7 @@ public class MenuPanel : MonoBehaviour
 {
     [SerializeField] private Color MenuColorSelect;
     [SerializeField] private ButtonController[] Buttons;
+
     private int MenuNumberSelect;
     private bool Changed = true; // Check if need to update
     // private bool Trigger = false;

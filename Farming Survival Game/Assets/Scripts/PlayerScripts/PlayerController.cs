@@ -1,24 +1,48 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerController : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] private Animator m_Animator;
+    [SerializeField] private InputAction m_InputAction;
+    [SerializeField] private float m_movespeed;
+    private Vector2 m_MoveDirection = Vector2.zero;
+    private Rigidbody2D rb;
+
+    private void OnEnable() 
+    {
+        m_InputAction.Enable();
+    }
+
+    private void OnDisable() 
+    {
+        m_InputAction.Disable();
+    }
+
+
     private int IdleHash, RunHash, DyingHash;
     void Start()
     {
         IdleHash = Animator.StringToHash("Idle");
         DyingHash = Animator.StringToHash("Dying");
         RunHash = Animator.StringToHash("Run");
+
+        rb = gameObject.GetComponent<Rigidbody2D>();
         
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        m_MoveDirection = m_InputAction.ReadValue<Vector2>();
+    }
+
+    private void FixedUpdate() 
+    {
+        rb.velocity = m_MoveDirection * m_movespeed;
     }
 
     [ContextMenu("Run")]

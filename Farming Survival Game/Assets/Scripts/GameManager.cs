@@ -54,6 +54,7 @@ public class GameManager : MonoBehaviour
             DeadScreen.SetActive(State == GameState.Death);
             MenuPanel.SetActive(State == GameState.Menu);
             PlayScreen.SetActive(State == GameState.Play);
+            m_InventoryUI.gameObject.SetActive(false);
             m_Player.Active = true;
         }
     }

@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Animator m_Animator;
     [SerializeField] private InputAction m_InputAction;
     [SerializeField] private float m_movespeed;
+    [SerializeField] private InventoryController m_Inventory;
     private Vector2 m_MoveDirection = Vector2.zero;
     private Rigidbody2D rb;
 
@@ -34,7 +35,6 @@ public class PlayerController : MonoBehaviour
         RunHash = Animator.StringToHash("Run");
 
         rb = gameObject.GetComponent<Rigidbody2D>();
-        
     }
 
     // Update is called once per frame
@@ -75,5 +75,10 @@ public class PlayerController : MonoBehaviour
         m_Animator.SetBool(DyingHash, true);
         m_Animator.SetBool("Idle", false);
         m_Animator.SetBool("Run", false);
+    }
+
+    private void OnTriggerEnter2D(Collider2D other) {
+        CollectableObjectController m_object = other.GetComponent<CollectableObjectController>();
+        m_Inventory.Add(m_object.Getter());
     }
 }

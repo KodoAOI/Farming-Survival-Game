@@ -22,8 +22,15 @@ public class MenuPanel : MonoBehaviour
 
     void Update()
     {
+        if(gameObject.activeSelf == false)
+            return;
         if(Input.anyKeyDown)
         {
+            if(Input.GetKeyDown(KeyCode.Return))
+            {
+                Buttons[MenuNumberSelect].Trigger();
+            }
+
             MenuNumberSelect -= (int)Input.GetAxisRaw("Vertical");
             int Temp = (int)Input.GetAxisRaw("Horizontal") * Buttons.Length/2;
             

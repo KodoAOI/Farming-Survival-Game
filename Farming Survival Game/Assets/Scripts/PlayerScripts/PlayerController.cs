@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
+
 public class PlayerController : MonoBehaviour
 {
     // Start is called before the first frame update
@@ -12,6 +13,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private InventoryController m_Inventory;
     private Vector2 m_MoveDirection = Vector2.zero;
     private Rigidbody2D rb;
+
+    public bool Active = true;
 
     private void OnEnable() 
     {
@@ -37,6 +40,7 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(!Active)return;
         m_MoveDirection = m_InputAction.ReadValue<Vector2>();
         if(m_MoveDirection != Vector2.zero)
             Run();

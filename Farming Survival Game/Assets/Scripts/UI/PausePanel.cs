@@ -20,8 +20,17 @@ public class PausePanel : MonoBehaviour
 
     void Update()
     {
+        if(gameObject.activeSelf == false)
+            return;
         if(Input.anyKeyDown)
         {
+            if(Input.GetKeyDown(KeyCode.Return))
+            {
+                Buttons[NumberSelect].Trigger();
+                OnTrigger();
+                return;
+            }
+
             NumberSelect -= (int)Input.GetAxisRaw("Vertical");
             Changed = true;
         }

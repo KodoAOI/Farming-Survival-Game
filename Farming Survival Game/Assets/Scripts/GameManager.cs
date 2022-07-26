@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    private enum GameState
+    public enum GameState
     {
         Menu,
         Play,
         Pause,
         Death
     }
-    [SerializeField] GameObject DeadScreen, PausePanel, MenuPanel;
+    [SerializeField] GameObject DeadScreen, PausePanel, MenuPanel, PlayScreen;
+    [SerializeField] PlayerController m_Player;
     private GameState CurrState;
-    private GameState TempState;
     void Start()
     {
         SetState(GameState.Menu);
@@ -23,28 +23,32 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Escape))
-            if(!PausePanel.GetComponent<PausePanel>().OnTrigger())
+            if(!PausePanel.GetComponent<PausePanel>().OnTrigger() && CurrState != GameState.Menu)
             {
-                TempState = CurrState;
                 SetState(GameState.Pause);
             }
             else 
             {
-                SetState(TempState);
+                SetState(CurrState);
             }
 
     }
 
-    private void SetState(GameState State)
+    public void SetState(GameState State)
     {
         if(State == GameState.Pause)
+        {
+            m_Player.Active = false;
             PausePanel.SetActive(true);
+        }
         else
         {
             CurrState = State;
             PausePanel.SetActive(false);
             DeadScreen.SetActive(State == GameState.Death);
             MenuPanel.SetActive(State == GameState.Menu);
+            PlayScreen.SetActive(State == GameState.Play);
+            m_Player.Active = true;
         }
     }
 }

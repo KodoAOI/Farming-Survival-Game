@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private InputAction m_InputAction;
     [SerializeField] private float m_movespeed;
     [SerializeField] private InventoryController m_Inventory;
+    [SerializeField] private float m_Scale;
     private Vector2 m_MoveDirection = Vector2.zero;
     private Rigidbody2D rb;
 
@@ -47,9 +48,9 @@ public class PlayerController : MonoBehaviour
         else
             Idle();
         if(m_MoveDirection.x > 0)
-            transform.localScale = Vector3.one;
+            transform.localScale = Vector3.one * m_Scale;
         else if (m_MoveDirection.x < 0)
-            transform.localScale= new Vector3(-1, 1, 1);
+            transform.localScale= new Vector3(-1, 1, 1) * m_Scale;
     }
 
     private void FixedUpdate() 

@@ -75,6 +75,7 @@ public class PlayerController : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
+        Debug.Log(m_Inventory);
         CollectableObjectController m_object = other.GetComponent<CollectableObjectController>();
         m_Inventory.Add(m_object.Getter());
     }

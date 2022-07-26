@@ -7988,6 +7988,7 @@ MonoBehaviour:
       m_Flags: 8
     m_Flags: 0
   m_movespeed: 1
+  m_Inventory: {fileID: 1679963785}
 --- !u!95 &1303419655
 Animator:
   serializedVersion: 4
@@ -8908,6 +8909,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9bedae395a3e9f4a9dacb581f13eb84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Type: 1
 --- !u!1 &1422940607
 GameObject:
   m_ObjectHideFlags: 0
@@ -10628,6 +10630,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1679963783}
   - component: {fileID: 1679963784}
+  - component: {fileID: 1679963785}
   m_Layer: 0
   m_Name: Inventory
   m_TagString: Untagged
@@ -10669,6 +10672,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_InventoryPanel: {fileID: 1722814288}
+--- !u!114 &1679963785
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1679963782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a291274dc2e4ac47b3828eb07caba6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_MaxStack: 16
 --- !u!1 &1700271388
 GameObject:
   m_ObjectHideFlags: 0

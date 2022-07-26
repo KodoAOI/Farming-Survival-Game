@@ -16,16 +16,7 @@ public class Inventory_UI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Tab))
-        {
-            ShowInventory();
-        }
-    }
 
-    private void ShowInventory()
-    {
-        if(m_InventoryPanel.activeSelf == false)    m_InventoryPanel.SetActive(true);
-        else m_InventoryPanel.SetActive(false);
     }
 
 }

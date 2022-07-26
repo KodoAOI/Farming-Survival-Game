@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     }
     [SerializeField] GameObject DeadScreen, PausePanel, MenuPanel, PlayScreen;
     [SerializeField] PlayerController m_Player;
+    [SerializeField] Inventory_UI m_InventoryUI;
     private GameState CurrState;
     void Start()
     {
@@ -31,6 +32,11 @@ public class GameManager : MonoBehaviour
             {
                 SetState(CurrState);
             }
+        
+        if(Input.GetKeyDown(KeyCode.Tab) && CurrState == GameState.Play && !PausePanel.gameObject.activeSelf)
+        {
+            m_InventoryUI.gameObject.SetActive(!m_InventoryUI.gameObject.activeSelf);
+        }
 
     }
 

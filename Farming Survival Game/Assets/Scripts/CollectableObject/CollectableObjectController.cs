@@ -6,10 +6,16 @@ public class CollectableObjectController : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] private CollectableType m_Type;
+    public Sprite Icon;
 
     public CollectableType Getter()
     {
         return m_Type;
+    }
+
+    public void Setter()
+    {
+
     }
     void Start()
     {
@@ -32,5 +38,6 @@ public class CollectableObjectController : MonoBehaviour
 public enum CollectableType
 {
     NONE, 
-    Carrot
+    Carrot,
+    Chili
 }

@@ -6,7 +6,8 @@ using TMPro;
 
 public class ButtonController : MonoBehaviour
 {
-    // Start is called before the first frame update
+    [SerializeField] private GameManager.GameState ScenceChangeTo;
+    [SerializeField] private GameManager m_GameManager;
     public Color DefaultColor;
     void Start()
     {
@@ -22,5 +23,10 @@ public class ButtonController : MonoBehaviour
     public void SetTextColor(Color color)
     {
         gameObject.GetComponentInChildren<TextMeshProUGUI>().color = color;
+    }
+
+    public void Trigger()
+    {
+        m_GameManager.SetState(ScenceChangeTo);
     }
 }

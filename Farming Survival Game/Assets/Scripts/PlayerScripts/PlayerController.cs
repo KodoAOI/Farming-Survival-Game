@@ -9,7 +9,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Animator m_Animator;
     [SerializeField] private InputAction m_InputAction;
     [SerializeField] private float m_movespeed;
-    [SerializeField] private InventoryController m_Inventory = new InventoryController(27);
+    [SerializeField] private InventoryController m_Inventory;
     private Vector2 m_MoveDirection = Vector2.zero;
     private Rigidbody2D rb;
 
@@ -32,6 +32,7 @@ public class PlayerController : MonoBehaviour
         RunHash = Animator.StringToHash("Run");
 
         rb = gameObject.GetComponent<Rigidbody2D>();
+        m_Inventory.NumSlots = 27;
         
     }
 
@@ -75,7 +76,7 @@ public class PlayerController : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        Debug.Log(m_Inventory);
+        print(m_Inventory);
         CollectableObjectController m_object = other.GetComponent<CollectableObjectController>();
         m_Inventory.Add(m_object.Getter());
     }

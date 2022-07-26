@@ -5,6 +5,8 @@ using UnityEngine;
 public class InventoryController : MonoBehaviour
 {
     [SerializeField] private int m_MaxStack;
+    public List<Slot> Slots = new List<Slot>();
+    public int NumSlots;
     public class Slot
     {
         public int Count;
@@ -26,16 +28,15 @@ public class InventoryController : MonoBehaviour
         }
     }
 
-    public List<Slot> Slots = new List<Slot>();
+  
     
-    public InventoryController(int NumSlots)
+    void Start()
     {
         for(int i = 0; i < NumSlots; i++)
         {
             Slot slot = new Slot(m_MaxStack);
             Slots.Add(slot);
         }
-        Debug.Log("1");
     }
 
     public void Add(CollectableType objectType)
@@ -46,6 +47,7 @@ public class InventoryController : MonoBehaviour
         {
             if(slot.Type == objectType)
             {
+                print(objectType);
                 if(slot.Count < slot.MaxCount)
                 {
                     slot.Count ++;

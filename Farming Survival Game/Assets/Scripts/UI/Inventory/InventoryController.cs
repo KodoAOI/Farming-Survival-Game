@@ -12,6 +12,7 @@ public class InventoryController : MonoBehaviour
         public int Count;
         public int MaxCount;
         public CollectableType Type;
+        public Sprite m_Icon;
 
         public Slot(int m_MaxStack)
         {
@@ -20,9 +21,10 @@ public class InventoryController : MonoBehaviour
             Type = CollectableType.NONE;
         }
 
-        public void Add(CollectableType objectType)
+        public void Add(CollectableObjectController Object)
         {
-            Type = objectType;
+            Type = Object.Getter();
+            m_Icon = Object.Icon;
             Count++;
         }
     }
@@ -38,14 +40,13 @@ public class InventoryController : MonoBehaviour
         }
     }
 
-    public void Add(CollectableType objectType)
+    public void Add(CollectableObjectController Object)
     {
         bool Flag = false;
         foreach(Slot slot in Slots)
         {
-            if(slot.Type == objectType)
+            if(slot.Type == Object.Getter())
             {
-                print(objectType);
                 if(slot.Count < slot.MaxCount)
                 {
                     slot.Count ++;
@@ -59,7 +60,7 @@ public class InventoryController : MonoBehaviour
             {
                 if(slot.Type == CollectableType.NONE)
                 {
-                    slot.Add(objectType);
+                    slot.Add(Object);
                     break;
                 }
             }

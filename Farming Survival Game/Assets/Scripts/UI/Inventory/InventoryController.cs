@@ -22,7 +22,6 @@ public class InventoryController : MonoBehaviour
 
         public void Add(CollectableType objectType)
         {
-            Debug.Log("Success!!!");
             Type = objectType;
             Count++;
         }
@@ -41,7 +40,6 @@ public class InventoryController : MonoBehaviour
 
     public void Add(CollectableType objectType)
     {
-        Debug.Log(Slots.Count);
         bool Flag = false;
         foreach(Slot slot in Slots)
         {

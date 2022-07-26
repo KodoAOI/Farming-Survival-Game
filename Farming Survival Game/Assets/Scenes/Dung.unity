@@ -8777,7 +8777,7 @@ GameObject:
   - component: {fileID: 1422714535}
   - component: {fileID: 1422714539}
   m_Layer: 0
-  m_Name: Carrot1
+  m_Name: CollectableObject
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10685,6 +10685,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_MaxStack: 16
+  NumSlots: 27
 --- !u!1 &1700271388
 GameObject:
   m_ObjectHideFlags: 0

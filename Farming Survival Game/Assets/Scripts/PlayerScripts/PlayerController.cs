@@ -38,6 +38,14 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         m_MoveDirection = m_InputAction.ReadValue<Vector2>();
+        if(m_MoveDirection != Vector2.zero)
+            Run();
+        else
+            Idle();
+        if(m_MoveDirection.x > 0)
+            transform.localScale = Vector3.one;
+        else if (m_MoveDirection.x < 0)
+            transform.localScale= new Vector3(-1, 1, 1);
     }
 
     private void FixedUpdate() 

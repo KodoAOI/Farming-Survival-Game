@@ -32,8 +32,6 @@ public class PlayerController : MonoBehaviour
         RunHash = Animator.StringToHash("Run");
 
         rb = gameObject.GetComponent<Rigidbody2D>();
-        m_Inventory.NumSlots = 27;
-        
     }
 
     // Update is called once per frame
@@ -76,7 +74,6 @@ public class PlayerController : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        print(m_Inventory);
         CollectableObjectController m_object = other.GetComponent<CollectableObjectController>();
         m_Inventory.Add(m_object.Getter());
     }

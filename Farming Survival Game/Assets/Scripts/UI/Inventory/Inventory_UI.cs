@@ -10,7 +10,7 @@ public class Inventory_UI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        m_InventoryPanel.SetActive(false);
     }
 
     // Update is called once per frame

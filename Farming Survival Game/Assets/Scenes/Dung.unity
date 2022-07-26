@@ -1320,6 +1320,8 @@ MonoBehaviour:
   DeadScreen: {fileID: 355010684}
   PausePanel: {fileID: 1935485341}
   MenuPanel: {fileID: 2078307392}
+  PlayScreen: {fileID: 0}
+  m_Player: {fileID: 0}
 --- !u!81 &222114973
 AudioListener:
   m_ObjectHideFlags: 0
@@ -1422,6 +1424,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85f188f89f55ee3488333b1db8b24fc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ScenceChangeTo: 0
+  m_GameManager: {fileID: 0}
   DefaultColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &223940528
 MonoBehaviour:
@@ -3597,6 +3601,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85f188f89f55ee3488333b1db8b24fc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ScenceChangeTo: 0
+  m_GameManager: {fileID: 0}
   DefaultColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &578194745
 MonoBehaviour:
@@ -4077,6 +4083,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85f188f89f55ee3488333b1db8b24fc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ScenceChangeTo: 0
+  m_GameManager: {fileID: 0}
   DefaultColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &695160767
 MonoBehaviour:
@@ -4661,6 +4669,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85f188f89f55ee3488333b1db8b24fc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ScenceChangeTo: 0
+  m_GameManager: {fileID: 0}
   DefaultColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &748612157
 MonoBehaviour:
@@ -5814,6 +5824,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85f188f89f55ee3488333b1db8b24fc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ScenceChangeTo: 0
+  m_GameManager: {fileID: 0}
   DefaultColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &875112482
 MonoBehaviour:
@@ -7074,6 +7086,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85f188f89f55ee3488333b1db8b24fc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ScenceChangeTo: 0
+  m_GameManager: {fileID: 0}
   DefaultColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &1150511531
 MonoBehaviour:
@@ -7989,6 +8003,7 @@ MonoBehaviour:
     m_Flags: 0
   m_movespeed: 1
   m_Inventory: {fileID: 1679963785}
+  Active: 1
 --- !u!95 &1303419655
 Animator:
   serializedVersion: 4
@@ -8346,6 +8361,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85f188f89f55ee3488333b1db8b24fc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ScenceChangeTo: 0
+  m_GameManager: {fileID: 0}
   DefaultColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &1362330795
 MonoBehaviour:
@@ -9963,6 +9980,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85f188f89f55ee3488333b1db8b24fc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ScenceChangeTo: 0
+  m_GameManager: {fileID: 0}
   DefaultColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &1593633110
 MonoBehaviour:
@@ -12205,6 +12224,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 85f188f89f55ee3488333b1db8b24fc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ScenceChangeTo: 0
+  m_GameManager: {fileID: 0}
   DefaultColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &1914523781
 MonoBehaviour:
@@ -12662,7 +12683,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &2078307393
 MonoBehaviour:
   m_ObjectHideFlags: 0

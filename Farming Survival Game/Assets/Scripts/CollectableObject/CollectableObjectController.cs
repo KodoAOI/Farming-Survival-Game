@@ -32,5 +32,6 @@ public class CollectableObjectController : MonoBehaviour
 public enum CollectableType
 {
     NONE, 
-    Carrot
+    Carrot,
+    Chili
 }

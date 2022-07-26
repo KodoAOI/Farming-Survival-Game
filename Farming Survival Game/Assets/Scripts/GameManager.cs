@@ -35,7 +35,10 @@ public class GameManager : MonoBehaviour
         
         if(Input.GetKeyDown(KeyCode.Tab) && CurrState == GameState.Play && !PausePanel.gameObject.activeSelf)
         {
-            m_InventoryUI.gameObject.SetActive(!m_InventoryUI.gameObject.activeSelf);
+            bool check = !m_InventoryUI.gameObject.activeSelf;
+            if(check)
+                m_InventoryUI.Setup();
+            m_InventoryUI.gameObject.SetActive(check);
         }
 
     }

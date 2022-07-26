@@ -45,6 +45,7 @@ public class InventoryController : MonoBehaviour
         bool Flag = false;
         foreach(Slot slot in Slots)
         {
+    
             if(slot.Type == Object.Getter())
             {
                 if(slot.Count < slot.MaxCount)

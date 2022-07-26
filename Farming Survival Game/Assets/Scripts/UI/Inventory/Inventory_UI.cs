@@ -15,7 +15,7 @@ public class Inventory_UI : MonoBehaviour
         m_InventoryPanel.SetActive(false);
     }
 
-    void Setup()
+    public void Setup()
     {
         if(slots.Count == m_Player.GetInventoryNumSlot())
         {

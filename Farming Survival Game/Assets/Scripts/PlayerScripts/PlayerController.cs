@@ -80,7 +80,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) {
         CollectableObjectController m_object = other.GetComponent<CollectableObjectController>();
-        m_Inventory.Add(m_object);
+        if(m_object != null && m_object.tag == "CollectableObject") m_Inventory.Add(m_object);
     }
 
     public int GetInventoryNumSlot()

@@ -296,7 +296,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 84751420}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 21ce9f34d86d3444b9e77159e6d6d464, type: 3}
   m_Name: 
@@ -1099,6 +1099,7 @@ MonoBehaviour:
   MenuPanel: {fileID: 1514354858}
   PlayScreen: {fileID: 1310587347}
   m_Player: {fileID: 1926463004}
+  m_InventoryUI: {fileID: 371401108}
 --- !u!81 &229233264
 AudioListener:
   m_ObjectHideFlags: 0
@@ -1519,6 +1520,7 @@ GameObject:
   - component: {fileID: 371401105}
   - component: {fileID: 371401107}
   - component: {fileID: 371401106}
+  - component: {fileID: 371401108}
   m_Layer: 0
   m_Name: Background
   m_TagString: Untagged
@@ -1587,6 +1589,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 371401104}
   m_CullTransparentMesh: 1
+--- !u!114 &371401108
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 371401104}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21ce9f34d86d3444b9e77159e6d6d464, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_InventoryPanel: {fileID: 371401104}
+  m_Player: {fileID: 1926463004}
+  slots: []
 --- !u!1 &398926093
 GameObject:
   m_ObjectHideFlags: 0
@@ -3942,7 +3959,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &829780842
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11818,6 +11835,7 @@ MonoBehaviour:
     m_Flags: 0
   m_movespeed: 3
   m_Inventory: {fileID: 84751422}
+  m_Scale: 1
   Active: 1
 --- !u!95 &1926463005
 Animator:

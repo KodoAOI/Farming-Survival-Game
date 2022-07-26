@@ -9849,7 +9849,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &900349056
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10778,6 +10778,7 @@ MonoBehaviour:
     m_Flags: 0
   m_movespeed: 3
   m_Inventory: {fileID: 0}
+  m_Scale: 0
   Active: 1
 --- !u!114 &1057887302
 MonoBehaviour:
@@ -12656,7 +12657,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ScenceChangeTo: 0
-  m_GameManager: {fileID: 0}
+  m_GameManager: {fileID: 675201318}
   DefaultColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &1468547388
 GameObject:
@@ -13132,7 +13133,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ScenceChangeTo: 0
-  m_GameManager: {fileID: 0}
+  m_GameManager: {fileID: 675201318}
   DefaultColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &1562006406
 GameObject:
@@ -15266,7 +15267,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ScenceChangeTo: 0
-  m_GameManager: {fileID: 0}
+  m_GameManager: {fileID: 675201318}
   DefaultColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &1935801680
 GameObject:

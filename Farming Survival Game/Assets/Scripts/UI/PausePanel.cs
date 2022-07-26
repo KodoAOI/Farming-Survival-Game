@@ -27,6 +27,8 @@ public class PausePanel : MonoBehaviour
             if(Input.GetKeyDown(KeyCode.Return))
             {
                 Buttons[NumberSelect].Trigger();
+                OnTrigger();
+                return;
             }
 
             NumberSelect -= (int)Input.GetAxisRaw("Vertical");

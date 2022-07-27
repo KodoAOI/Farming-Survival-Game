@@ -27,6 +27,20 @@ public class InventoryController : MonoBehaviour
             m_Icon = Object.Icon;
             Count++;
         }
+        
+        public void RemoveItem()
+        {
+            if(Count > 0)
+            {
+                Count--;
+
+                if(Count == 0)
+                {
+                    m_Icon = null;
+                    Type = CollectableType.NONE;
+                }
+            }
+        }
     }
 
   
@@ -66,5 +80,10 @@ public class InventoryController : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void Remove(int idx)
+    {
+        Slots[idx].RemoveItem();
     }
 }

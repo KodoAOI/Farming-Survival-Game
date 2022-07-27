@@ -17,10 +17,6 @@ public class Slot_UI : MonoBehaviour
             m_ItemIcon.color = new Color(1, 1, 1, 1);
             m_QuantityText.text = slot.Count.ToString();
         }
-        else 
-        {
-            Debug.Log("Panik!!!");
-        }
     }
 
     public void SetEmpty()

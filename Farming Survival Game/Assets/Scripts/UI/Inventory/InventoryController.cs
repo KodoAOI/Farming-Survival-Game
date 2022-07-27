@@ -5,6 +5,7 @@ using UnityEngine;
 public class InventoryController : MonoBehaviour
 {
     [SerializeField] private int m_MaxStack;
+    [SerializeField] ObjectInformationPanel m_ObjectInformationPanel;
     public List<Slot> Slots = new List<Slot>();
     public int NumSlots;
     public class Slot
@@ -85,5 +86,9 @@ public class InventoryController : MonoBehaviour
     public void Remove(int idx)
     {
         Slots[idx].RemoveItem();
+        if(Slots[idx].Count == 0)
+        {
+            m_ObjectInformationPanel.ResetInformationPanel();
+        }
     }
 }

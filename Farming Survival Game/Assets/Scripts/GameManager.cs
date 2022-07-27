@@ -39,7 +39,7 @@ public class GameManager : MonoBehaviour
         {
             bool check = !m_InventoryUI.gameObject.activeSelf;
             if(check)
-                m_InventoryUI.Setup();
+                m_InventoryUI.Setup(false);
             m_InventoryUI.gameObject.SetActive(check);
         }
 

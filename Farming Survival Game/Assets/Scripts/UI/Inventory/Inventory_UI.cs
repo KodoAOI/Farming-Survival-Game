@@ -33,4 +33,9 @@ public class Inventory_UI : MonoBehaviour
         }
     }
 
+    public void Remove(int SlotId)
+    {
+        m_Player.Remove(SlotId);
+        Setup();
+    }
 }

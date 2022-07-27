@@ -97,4 +97,9 @@ public class PlayerController : MonoBehaviour
     {
         return m_Inventory.Slots[idx];
     }
+
+    public void Remove(int SlotId)
+    {
+        m_Inventory.Remove(SlotId);
+    }
 }

@@ -23,6 +23,7 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        transform.localScale = new Vector3(1, 1, 1);
         if(Input.GetKeyDown(KeyCode.Escape))
             if(!PausePanel.GetComponent<PausePanel>().OnTrigger() && CurrState != GameState.Menu)
             {

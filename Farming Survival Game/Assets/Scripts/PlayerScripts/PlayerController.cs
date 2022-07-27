@@ -36,6 +36,7 @@ public class PlayerController : MonoBehaviour
         RunHash = Animator.StringToHash("Run");
 
         rb = gameObject.GetComponent<Rigidbody2D>();
+        rb.freezeRotation = true;
     }
 
     // Update is called once per frame
@@ -79,6 +80,12 @@ public class PlayerController : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
+        GameObject m_obGame = other.GetComponent<GameObject>();
+        try
+        {
+            print(m_obGame.name);
+        }
+        catch{}
         CollectableObjectController m_object = other.GetComponent<CollectableObjectController>();
         if(m_object != null && m_object.tag == "CollectableObject") m_Inventory.Add(m_object);
     }

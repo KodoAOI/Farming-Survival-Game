@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] GameObject DeadScreen, PausePanel, MenuPanel, PlayScreen;
     [SerializeField] PlayerController m_Player;
     [SerializeField] Inventory_UI m_InventoryUI;
+    [SerializeField] AttributeUIController m_AtrributeUI;
     private GameState CurrState;
     void Start()
     {
@@ -58,6 +59,7 @@ public class GameManager : MonoBehaviour
             DeadScreen.SetActive(State == GameState.Death);
             MenuPanel.SetActive(State == GameState.Menu);
             PlayScreen.SetActive(State == GameState.Play);
+            m_AtrributeUI.gameObject.SetActive(State == GameState.Play);
             m_InventoryUI.gameObject.SetActive(false);
             m_Player.Active = true;
         }

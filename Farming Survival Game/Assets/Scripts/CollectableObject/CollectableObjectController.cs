@@ -6,6 +6,7 @@ public class CollectableObjectController : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] private CollectableType m_Type;
+    [SerializeField] private ObjectPool m_Pool;
     public Sprite Icon;
 
     public CollectableType Getter()
@@ -17,9 +18,10 @@ public class CollectableObjectController : MonoBehaviour
     {
 
     }
+    
     void Start()
     {
-        
+        m_Pool.m_CollectableObjectPool.m_PoolType = m_Type;
     }
 
     // Update is called once per frame
@@ -29,7 +31,8 @@ public class CollectableObjectController : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        gameObject.SetActive(false);
+        if(other.gameObject.GetComponent<PlayerController>() != null)
+            m_Pool.m_CollectableObjectPool.Release(this);
     }
 
     

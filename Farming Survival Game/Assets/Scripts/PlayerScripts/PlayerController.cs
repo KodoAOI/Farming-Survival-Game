@@ -12,10 +12,15 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float m_movespeed;
     [SerializeField] private InventoryController m_Inventory;
     [SerializeField] private float m_Scale;
+    [SerializeField] private GameObject m_ChopAnimation;
+    [SerializeField] private AttributeController m_AttributeController;
     private Vector2 m_MoveDirection = Vector2.zero;
     private Rigidbody2D rb;
+    private PlayerActionController m_ActionCollider;
 
     public bool Active = true;
+    public float CurrHealth, CurrFood, CurrStamina;
+    public float MaxHealth, MaxFood, MaxStamina;
 
     private void OnEnable() 
     {
@@ -28,12 +33,18 @@ public class PlayerController : MonoBehaviour
     }
 
 
-    private int IdleHash, RunHash, DyingHash;
+    
     void Start()
     {
-        IdleHash = Animator.StringToHash("Idle");
-        DyingHash = Animator.StringToHash("Dying");
-        RunHash = Animator.StringToHash("Run");
+        CurrHealth = MaxHealth;
+        CurrFood = MaxFood;
+        CurrStamina = MaxStamina;
+
+        m_AttributeController.MaxHealth = MaxHealth;
+        m_AttributeController.MaxFood = MaxFood;
+        m_AttributeController.MaxStamina = MaxStamina;
+
+        m_ActionCollider = gameObject.GetComponentInChildren<PlayerActionController>();
 
         rb = gameObject.GetComponent<Rigidbody2D>();
         rb.freezeRotation = true;
@@ -43,6 +54,11 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
         if(!Active)return;
+
+        m_AttributeController.CurrHealth = CurrHealth;
+        m_AttributeController.CurrFood = CurrFood;
+        m_AttributeController.CurrStamina = CurrStamina;
+
         m_MoveDirection = m_InputAction.ReadValue<Vector2>();
         if(m_MoveDirection != Vector2.zero)
             Run();
@@ -74,7 +90,7 @@ public class PlayerController : MonoBehaviour
     [ContextMenu("Die")]
     private void Die()
     {
-        m_Animator.SetBool(DyingHash, true);
+        m_Animator.SetBool("Die", true);
         m_Animator.SetBool("Idle", false);
         m_Animator.SetBool("Run", false);
     }
@@ -108,5 +124,11 @@ public class PlayerController : MonoBehaviour
     public void Remove(int SlotId)
     {
         m_Inventory.Remove(SlotId);
+    }
+
+    public void Chop(bool StartChop)
+    {
+        print("Chop");
+        m_ChopAnimation.SetActive(StartChop);
     }
 }

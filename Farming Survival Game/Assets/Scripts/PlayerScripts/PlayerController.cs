@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float m_Scale;
     [SerializeField] private GameObject m_ChopAnimation;
     [SerializeField] private AttributeController m_AttributeController;
+    [SerializeField] private ObjectPool m_CollectableObjectPool;
     private Vector2 m_MoveDirection = Vector2.zero;
     private Rigidbody2D rb;
     private PlayerActionController m_ActionCollider;
@@ -96,14 +97,15 @@ public class PlayerController : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        GameObject m_obGame = other.GetComponent<GameObject>();
-        try
-        {
-            print(m_obGame.name);
-        }
-        catch{}
+        // print(gameObject.GetComponent<Collider2D>());
+        // GameObject m_obGame = other.GetComponent<GameObject>();
         CollectableObjectController m_object = other.GetComponent<CollectableObjectController>();
-        if(m_object != null && m_object.tag == "CollectableObject") m_Inventory.Add(m_object);
+
+        if(m_object != null && m_object.tag == "CollectableObject" && m_object.GetCollideWith == gameObject.GetComponent<Collider2D>())
+        {
+            m_Inventory.Add(m_object);
+            m_object.SelfDestroy();
+        }
     }
 
     public int GetInventoryNumSlot()
@@ -133,7 +135,6 @@ public class PlayerController : MonoBehaviour
 
     public void Chop(bool StartChop)
     {
-        print("Chop");
         m_ChopAnimation.SetActive(StartChop);
     }
     public void DropItem(CollectableObjectController item)
@@ -142,7 +143,7 @@ public class PlayerController : MonoBehaviour
 
         Vector3 spawnOffset = Random.insideUnitCircle * 1.25f;
 
-        CollectableObjectController droppedItem = Instantiate(item, spawnLocation + spawnOffset, Quaternion.identity);
+        CollectableObjectController droppedItem = m_CollectableObjectPool.m_CollectableObjectPool.Spawn(spawnLocation + spawnOffset,null);//Instantiate(item, spawnLocation + spawnOffset, Quaternion.identity);
         droppedItem.rb2d.AddForce(spawnOffset * .2f, ForceMode2D.Impulse);
     }
 

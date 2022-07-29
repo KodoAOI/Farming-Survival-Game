@@ -29,7 +29,7 @@ public class CollectableObjectPool
     public CollectableType m_PoolType;
     public CollectableObjectController m_Object;
 
-    public void Spawn(Vector2 Position, Transform Parent)
+    public CollectableObjectController Spawn(Vector2 Position, Transform Parent)
     {
         if(m_InactiveObject.Count <= 0)
         {
@@ -38,6 +38,7 @@ public class CollectableObjectPool
            m_NewObj.transform.SetParent(Parent);
            m_NewObj.gameObject.SetActive(true);
            m_ActiveObject.Add(m_NewObj);
+           return m_NewObj;
         }
         else
         {
@@ -47,6 +48,7 @@ public class CollectableObjectPool
            m_NewObj.gameObject.SetActive(true);
            m_ActiveObject.Add(m_NewObj);
            m_InactiveObject.RemoveAt(0);
+           return m_NewObj;
         }
     }
 

@@ -37,12 +37,27 @@ public class CollectableObjectController : MonoBehaviour
         
     }
 
+    public Collider2D GetCollideWith;
     private void OnTriggerEnter2D(Collider2D other) {
-        if(other.gameObject.GetComponent<PlayerController>() != null)
-            m_Pool.m_CollectableObjectPool.Release(this);
+        if(other.GetComponent<PlayerController>() != null && other.tag == "Player")
+        {
+            GetCollideWith = other;
+            // m_Pool.m_CollectableObjectPool.Release(this);
+        }
         // print(other);
-        PlayerController obj = other.GetComponent<PlayerController>();
-        if(obj != null && obj.tag == "Player") gameObject.SetActive(false);
+        // PlayerController obj = other.GetComponent<PlayerController>();
+        // if(obj != null && obj.tag == "Player") gameObject.SetActive(false);
+    }
+
+    public void SelfDestroy()
+    {
+        m_Pool.m_CollectableObjectPool.Release(this);
+        gameObject.SetActive(false);
+    }
+
+    private void OnTriggerExit2D(Collider2D other) {
+        if(other.GetComponent<PlayerController>() != null && other.tag == "Player")
+            GetCollideWith = null;
     }
 
     

@@ -46,7 +46,7 @@ public class InventoryController : MonoBehaviour
 
   
     
-    void Start()
+    void Awake()
     {
         for(int i = 0; i < NumSlots; i++)
         {
@@ -60,13 +60,13 @@ public class InventoryController : MonoBehaviour
         bool Flag = false;
         foreach(Slot slot in Slots)
         {
-    
             if(slot.Type == Object.Getter())
             {
                 if(slot.Count < slot.MaxCount)
                 {
                     slot.Count ++;
                     Flag = true;
+                    break;
                 }
             }
         }

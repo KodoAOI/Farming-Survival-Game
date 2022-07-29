@@ -8,6 +8,13 @@ public class CollectableObjectController : MonoBehaviour
     [SerializeField] private CollectableType m_Type;
     public Sprite Icon;
 
+    public Rigidbody2D rb2d;
+
+    private void Awake()
+    {
+        rb2d = GetComponent<Rigidbody2D>();
+    }
+
     public CollectableType Getter()
     {
         return m_Type;
@@ -29,7 +36,9 @@ public class CollectableObjectController : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D other) {
-        gameObject.SetActive(false);
+        // print(other);
+        PlayerController obj = other.GetComponent<PlayerController>();
+        if(obj != null && obj.tag == "Player") gameObject.SetActive(false);
     }
 
     

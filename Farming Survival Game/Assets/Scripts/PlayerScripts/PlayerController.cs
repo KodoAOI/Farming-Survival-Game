@@ -116,6 +116,11 @@ public class PlayerController : MonoBehaviour
         return m_Inventory.Slots[idx].Type;
     }
 
+    public int GetCollectableCount(int idx)
+    {
+        return m_Inventory.Slots[idx].Count;
+    }
+
     public InventoryController.Slot GetSlot(int idx)
     {
         return m_Inventory.Slots[idx];
@@ -131,4 +136,14 @@ public class PlayerController : MonoBehaviour
         print("Chop");
         m_ChopAnimation.SetActive(StartChop);
     }
+    public void DropItem(CollectableObjectController item)
+    {
+        Vector3 spawnLocation = transform.position;
+
+        Vector3 spawnOffset = Random.insideUnitCircle * 1.25f;
+
+        CollectableObjectController droppedItem = Instantiate(item, spawnLocation + spawnOffset, Quaternion.identity);
+        droppedItem.rb2d.AddForce(spawnOffset * .2f, ForceMode2D.Impulse);
+    }
+
 }

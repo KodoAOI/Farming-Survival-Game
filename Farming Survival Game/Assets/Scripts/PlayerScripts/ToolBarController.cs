@@ -14,7 +14,7 @@ public class ToolBarController : MonoBehaviour
     public List<Slot_UI> m_SlotUI;
     public int m_MaxToolSlot;
     public int ActiveSlot;
-    private KeyCode[] NumberArr = {KeyCode.Alpha1, KeyCode.Alpha2, KeyCode.Alpha3, KeyCode.Alpha4, KeyCode.Alpha5, KeyCode.Alpha6, KeyCode.Alpha7, KeyCode.Alpha8, KeyCode.Alpha9, KeyCode.Alpha0};
+    private KeyCode[] NumberArr = {KeyCode.Alpha1, KeyCode.Alpha2, KeyCode.Alpha3, KeyCode.Alpha4, KeyCode.Alpha5, KeyCode.Alpha6, KeyCode.Alpha7, KeyCode.Alpha8, KeyCode.Alpha9};
     void Start()
     {
         for(int i = 0; i < m_MaxToolSlot; i++)

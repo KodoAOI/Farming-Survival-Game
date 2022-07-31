@@ -35,7 +35,6 @@ public class Inventory_UI : MonoBehaviour
             m_ObjectInformationPanel.ResetInformationPanel();
         }
 
-
         if(slots.Count == m_Player.GetInventoryNumSlot())
         {
             for(int i = 0; i < slots.Count; i++)
@@ -69,6 +68,7 @@ public class Inventory_UI : MonoBehaviour
     {
         if(m_ObjectInformationPanel.m_SlotIdx == -1)    return;
         int num = m_Player.GetCollectableCount(m_ObjectInformationPanel.m_SlotIdx);
+        Vector3 SpawnPoint = m_Player.RandomPointInAnnulus(m_Player.transform.position, 1f, 1.25f);
         for(int i = 0; i < num; i++)
         {
             
@@ -76,10 +76,11 @@ public class Inventory_UI : MonoBehaviour
 
             if(itemToDrop != null)
             {
-                m_Player.DropItem(itemToDrop);
-                m_Player.Remove(m_ObjectInformationPanel.m_SlotIdx);
-                Setup(true);
+                Vector3 SpawnOffset = UnityEngine.Random.insideUnitCircle * 0.1f; 
+                m_Player.DropAllItem(itemToDrop, SpawnPoint + SpawnOffset);
+                m_Player.Remove(m_ObjectInformationPanel.m_SlotIdx); 
             }
         }
+        Setup(true);
     }
 }

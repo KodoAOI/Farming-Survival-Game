@@ -70,6 +70,7 @@ public class PlayerActionController : MonoBehaviour
         switch(m_Action)
         {
             case Action.Cut : ObjectOnQueue[0].GetComponent<OnMapObjectController>().SelfDestroy(); break;
+            case Action.Hoe : break;
             
         }
     }

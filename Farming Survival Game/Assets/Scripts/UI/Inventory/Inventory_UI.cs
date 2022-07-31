@@ -14,7 +14,7 @@ public class Inventory_UI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        m_InventoryPanel.SetActive(false);
+        // m_InventoryPanel.SetActive(false); ???
         for(int i = 0; i < slots.Count; i++)
         {
             slots[i].SlotIdx = i;

@@ -32,6 +32,7 @@ public class PlayerController : MonoBehaviour
      Dictionary<CollectableType, Action> ItemTriggerDictionary = new Dictionary<CollectableType, Action>()
     {
         {CollectableType.Axe, Action.Cut},
+        {CollectableType.Hoe, Action.Hoe},
         {CollectableType.Carrot, Action.None}
         
     };
@@ -68,17 +69,20 @@ public class PlayerController : MonoBehaviour
     {
         if(!Active)return;
         //trigger action
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.anyKeyDown)
         {
-            try
+            if(Input.GetKeyDown(KeyCode.Space))
             {
-                if(ItemTriggerDictionary[CurrItemOnHand.Type] == m_Action)
+                try
                 {
-                    m_AttributeUIController.MakeProgressBar(2.0f);
-                    m_AttributeUIController.SetAction(m_Action);
+                    if(ItemTriggerDictionary[CurrItemOnHand.Type] == m_Action)
+                    {
+                        m_AttributeUIController.MakeProgressBar(2.0f);
+                        m_AttributeUIController.SetAction(m_Action);
+                    }
                 }
+                catch{}
             }
-            catch{}
         }
         if(m_Action == Action.None)
             m_AttributeUIController.TurnOffProgressBar();

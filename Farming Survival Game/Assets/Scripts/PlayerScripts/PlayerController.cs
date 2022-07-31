@@ -167,10 +167,29 @@ public class PlayerController : MonoBehaviour
     {
         Vector3 spawnLocation = transform.position;
 
-        Vector3 spawnOffset = UnityEngine.Random.insideUnitCircle * 1.25f;
+        Vector3 spawnPoint = RandomPointInAnnulus(spawnLocation, 1f, 1.25f);
 
-        CollectableObjectController droppedItem = m_CollectableObjectsPool.m_Pool[item.Getter()].Spawn(spawnLocation + spawnOffset,null);//Instantiate(item, spawnLocation + spawnOffset, Quaternion.identity);
-        droppedItem.rb2d.AddForce(spawnOffset * .2f, ForceMode2D.Impulse);
+        CollectableObjectController droppedItem = m_CollectableObjectsPool.m_Pool[item.Getter()].Spawn(spawnPoint,null);//Instantiate(item, spawnLocation + spawnOffset, Quaternion.identity);
+        droppedItem.rb2d.AddForce((spawnPoint - spawnLocation) * .1f, ForceMode2D.Impulse);
+    }
+
+    public void DropAllItem(CollectableObjectController item, Vector3 spawnPoint)
+    {
+        Vector3 spawnLocation = transform.position;
+        CollectableObjectController droppedItem = m_CollectableObjectsPool.m_Pool[item.Getter()].Spawn(spawnPoint,null);//Instantiate(item, spawnLocation + spawnOffset, Quaternion.identity);
+        droppedItem.rb2d.AddForce((spawnPoint - spawnLocation) * .1f, ForceMode2D.Impulse);
+    }
+
+    public Vector2 RandomPointInAnnulus(Vector2 origin, float minRadius, float maxRadius)
+    {
+ 
+        var randomDirection = (UnityEngine.Random.insideUnitCircle * origin).normalized;
+ 
+        var randomDistance = UnityEngine.Random.Range(minRadius, maxRadius);
+ 
+        var point = origin + randomDirection * randomDistance;
+ 
+        return point;
     }
 
     public void SetItemOnHand(InventoryController.Slot item)

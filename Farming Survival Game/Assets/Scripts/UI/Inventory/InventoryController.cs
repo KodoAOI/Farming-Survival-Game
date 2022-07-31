@@ -105,6 +105,7 @@ public class InventoryController : MonoBehaviour
                 }
             }
         }
+        m_InventoryUI.Setup(false);
     }
 
     public void Remove(int idx)

@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float m_Scale;
     [SerializeField] private GameObject m_ChopAnimation;
     [SerializeField] private AttributeController m_AttributeController;
-    [SerializeField] private CollectableObjectPool m_CollectableObjectPool;
+    [SerializeField] private CollectableObjectsPool m_CollectableObjectsPool;
     [SerializeField] private AttributeUIController m_AttributeUIController;
     [SerializeField] private PlayerActionController m_PlayerActionController;
 
@@ -169,7 +169,7 @@ public class PlayerController : MonoBehaviour
 
         Vector3 spawnOffset = UnityEngine.Random.insideUnitCircle * 1.25f;
 
-        CollectableObjectController droppedItem = m_CollectableObjectPool.Spawn(spawnLocation + spawnOffset,null);//Instantiate(item, spawnLocation + spawnOffset, Quaternion.identity);
+        CollectableObjectController droppedItem = m_CollectableObjectsPool.m_Pool[item.Getter()].Spawn(spawnLocation + spawnOffset,null);//Instantiate(item, spawnLocation + spawnOffset, Quaternion.identity);
         droppedItem.rb2d.AddForce(spawnOffset * .2f, ForceMode2D.Impulse);
     }
 

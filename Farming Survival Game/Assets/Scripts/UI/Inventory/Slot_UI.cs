@@ -7,10 +7,6 @@ using UnityEngine.EventSystems;
 
 public class Slot_UI : MonoBehaviour, IDropHandler
 {
-    [SerializeField] Image m_ItemIcon;
-    [SerializeField] TextMeshProUGUI m_QuantityText;
-    [SerializeField] Inventory_UI m_InventoryUI;
-    [SerializeField] Color m_Color;
     [SerializeField] ToolBarController m_ToolBar;
     [SerializeField] private int Num;
     public bool IsActive;
@@ -27,7 +23,7 @@ public class Slot_UI : MonoBehaviour, IDropHandler
 
     private void Update()
     {
-        if(m_CloneSlot.gameObject.activeSelf == true && m_ObjectInformationPanel.m_SlotIdx != -1 && m_Player.GetCollectableCount(m_ObjectInformationPanel.m_SlotIdx) == 0)
+        if(m_CloneSlot != null && m_CloneSlot.gameObject.activeSelf == true && m_ObjectInformationPanel.m_SlotIdx != -1 && m_Player.GetCollectableCount(m_ObjectInformationPanel.m_SlotIdx) == 0)
         {
             Debug.Log("SetActiveFalseSuccess!!!");
             m_CloneSlot.GetComponent<DragDrop>().SetActiveFalse();

@@ -5,7 +5,6 @@ using UnityEngine;
 public class InventoryController : MonoBehaviour
 {
     // [SerializeField] private int m_MaxStack;
-    [SerializeField] ObjectInformationPanel m_ObjectInformationPanel;
     [SerializeField] private int m_MaxStack;
     [SerializeField] private ObjectInformationPanel m_ObjectInformationPanel;
     [SerializeField] private Inventory_UI m_InventoryUI;

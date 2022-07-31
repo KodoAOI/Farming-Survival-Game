@@ -9,12 +9,16 @@ public class Inventory_UI : MonoBehaviour
     [SerializeField] PlayerController m_Player;
     [SerializeField] ObjectInformationPanel m_ObjectInformationPanel;
     [SerializeField] Color m_Color;
-    public List<Slot_UI> slots= new List<Slot_UI>();
+    public List<Slot_UI> slots = new List<Slot_UI>();
     // [SerializeField] private Button m_Button;
     // Start is called before the first frame update
     void Start()
     {
         m_InventoryPanel.SetActive(false);
+        for(int i = 0; i < slots.Count; i++)
+        {
+            slots[i].SlotIdx = i;
+        }
     }
 
     public void Setup(bool DiscardOrNot)
@@ -27,6 +31,7 @@ public class Inventory_UI : MonoBehaviour
                 img.color = m_Color;
             }
 
+            m_ObjectInformationPanel.m_SlotIdx = -1;
             m_ObjectInformationPanel.ResetInformationPanel();
         }
 
@@ -46,11 +51,12 @@ public class Inventory_UI : MonoBehaviour
         }
     }
 
-    public void Remove()
+    public void Remove() // who am I
     {
+        if(m_ObjectInformationPanel.m_SlotIdx == -1)    return;
         CollectableObjectController itemToDrop = ItemGameManager.instance.itemManager.GetItemByType(m_Player.GetCollectableType(m_ObjectInformationPanel.m_SlotIdx));
 
-        if(itemToDrop != null)
+        if(itemToDrop != null && m_ObjectInformationPanel.m_SlotIdx != -1)
         {
             m_Player.DropItem(itemToDrop);
             m_Player.Remove(m_ObjectInformationPanel.m_SlotIdx);
@@ -60,6 +66,7 @@ public class Inventory_UI : MonoBehaviour
 
     public void RemoveAll()
     {
+        if(m_ObjectInformationPanel.m_SlotIdx == -1)    return;
         int num = m_Player.GetCollectableCount(m_ObjectInformationPanel.m_SlotIdx);
         for(int i = 0; i < num; i++)
         {

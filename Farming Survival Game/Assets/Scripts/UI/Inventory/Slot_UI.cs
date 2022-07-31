@@ -3,14 +3,30 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.EventSystems;
 
-public class Slot_UI : MonoBehaviour
+public class Slot_UI : MonoBehaviour, IDropHandler
 {
-    [SerializeField] Image m_ItemIcon;
-    [SerializeField] TextMeshProUGUI m_QuantityText;
-    [SerializeField] Inventory_UI m_InventoryUI;
-    [SerializeField] Color m_Color;
+    [SerializeField] private Image m_ItemIcon;
+    [SerializeField] private TextMeshProUGUI m_QuantityText;
+    [SerializeField] private Inventory_UI m_InventoryUI;
+    [SerializeField] private Color m_Color;
+    [SerializeField] private Image m_CloneSlot;
+    [SerializeField] private ObjectInformationPanel m_ObjectInformationPanel;
+    [SerializeField] private Transform m_FirstSlotPosition;
+    [SerializeField] private PlayerController m_Player;
 
+    public int SlotIdx;
+
+    private void Update()
+    {
+        if(m_CloneSlot.gameObject.activeSelf == true && m_ObjectInformationPanel.m_SlotIdx != -1 && m_Player.GetCollectableCount(m_ObjectInformationPanel.m_SlotIdx) == 0)
+        {
+            Debug.Log("SetActiveFalseSuccess!!!");
+            m_CloneSlot.GetComponent<DragDrop>().SetActiveFalse();
+        }
+
+    }
     public void SetItem(InventoryController.Slot slot)
     {
         if(slot != null)
@@ -37,5 +53,38 @@ public class Slot_UI : MonoBehaviour
         }
         Image image = gameObject.GetComponent<Image>();
         image.color = new Color(1, 1, 1, 0.5f);
+    }
+
+    public void OnClick1()
+    {
+        print("Success!!!");
+        if(m_ItemIcon.sprite != null)
+        {
+            m_CloneSlot.gameObject.SetActive(true);
+            DragDrop obj = m_CloneSlot.GetComponent<DragDrop>();
+            obj.SetPosition(m_ObjectInformationPanel.m_SlotIdx);
+            m_CloneSlot.sprite = m_ItemIcon.sprite;
+            m_CloneSlot.color = m_ItemIcon.color;
+        }
+    }
+
+    public void OnDrop(PointerEventData eventData)
+    {
+        Debug.Log("OnDrop");
+        if(eventData.pointerDrag != null)
+        {
+            Debug.Log(eventData.pointerDrag);
+            // int idx = m_ObjectInformationPanel.m_SlotIdx;
+            // eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = m_FirstSlotPosition.position + new Vector3(135 * (idx % 9), -(135 * (idx / 9)), 0);
+            // m_ItemIcon.color = new Color(0.4f, 0.65f, 0.23f, 1);
+            // Debug.Log(SlotIdx);
+            m_Player.InventorySwap(SlotIdx, m_ObjectInformationPanel.m_SlotIdx);
+            m_CloneSlot.GetComponent<DragDrop>().CheckDrop = true;
+            m_InventoryUI.Setup(false); 
+        }
+        // DragDrop obj = m_CloneSlot.GetComponent<DragDrop>();
+        // obj.SetPosition(SlotIdx);
+        // obj.CheckDrop = true;
+        // m_CloneSlot.gameObject.SetActive(false);
     }
 }

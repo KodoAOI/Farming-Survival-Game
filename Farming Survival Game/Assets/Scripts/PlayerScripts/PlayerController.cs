@@ -147,4 +147,9 @@ public class PlayerController : MonoBehaviour
         droppedItem.rb2d.AddForce(spawnOffset * .2f, ForceMode2D.Impulse);
     }
 
+    public void InventorySwap(int idx1, int idx2)
+    {
+        m_Inventory.Swap(idx1, idx2);
+    }
+
 }

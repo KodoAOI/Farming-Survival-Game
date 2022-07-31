@@ -35,9 +35,6 @@ public class Inventory_UI : MonoBehaviour
             m_ObjectInformationPanel.ResetInformationPanel();
         }
 
-        print(slots.Count);
-        print(m_Player);
-        print(m_Player.GetInventoryNumSlot());
 
         if(slots.Count == m_Player.GetInventoryNumSlot())
         {

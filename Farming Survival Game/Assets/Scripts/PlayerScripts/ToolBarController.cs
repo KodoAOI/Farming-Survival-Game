@@ -61,11 +61,6 @@ public class ToolBarController : MonoBehaviour
             }
         }
 
-        // TargetSlot.transform.position = m_SlotUI[ActiveSlot].transform.position;
-        
-    }
-
-    private void FixedUpdate() {
         for(int i = 0; i < m_MaxToolSlot; i++)
         {
             if(m_SlotUI[i].IsActive)
@@ -75,7 +70,6 @@ public class ToolBarController : MonoBehaviour
             }
         }
     }
-
     public void TriggerOff()
     {
         foreach(Slot_UI slot in m_SlotUI)

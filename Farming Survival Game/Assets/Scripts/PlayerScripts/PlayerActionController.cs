@@ -8,6 +8,7 @@ public class PlayerActionController : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField] private PlayerController m_Player;
     [SerializeField] private Tilemap m_Tilemap;
+    private List<OnMapObjectController> ObjectOnQueue = new List<OnMapObjectController>();
     private GameObject Object;
     private TileBase CurrTile;
 
@@ -26,12 +27,23 @@ public class PlayerActionController : MonoBehaviour
         
     }
 
+    private bool MapObjectFind(OnMapObjectController Object)
+    {
+        foreach(var obj in ObjectOnQueue)
+        {
+            if(obj.transform.parent.gameObject.name == Object.transform.parent.gameObject.name)
+            {
+                return false;
+            }
+        }
+        return true;
+    }
     private void OnTriggerStay2D(Collider2D other) {
         OnMapObjectController NewObject = other.gameObject.GetComponent<OnMapObjectController>();
         
         if(NewObject != null)
         {
-            Object = NewObject.gameObject;
+            if(MapObjectFind(NewObject))ObjectOnQueue.Add(NewObject);
             m_Player.SetAction(Action.Cut);
             m_Player.Chop(true);
         }
@@ -42,18 +54,22 @@ public class PlayerActionController : MonoBehaviour
         
         if(NewObject != null)
         {
-            Object = null;
-            m_Player.SetAction(Action.None);
-            m_Player.Chop(false);
+            ObjectOnQueue.Remove(NewObject);
+            if(ObjectOnQueue.Count == 0)
+            {
+                m_Player.SetAction(Action.None);
+                m_Player.Chop(false);
+            } 
+           
         }
     }
 
     public void TriggerAction(Action m_Action)
     {
-        if(Object == null)return;
+        if(ObjectOnQueue.Count == 0)return;
         switch(m_Action)
         {
-            case Action.Cut : Object.GetComponent<OnMapObjectController>().SelfDestroy(); break;
+            case Action.Cut : ObjectOnQueue[0].GetComponent<OnMapObjectController>().SelfDestroy(); break;
             
         }
     }

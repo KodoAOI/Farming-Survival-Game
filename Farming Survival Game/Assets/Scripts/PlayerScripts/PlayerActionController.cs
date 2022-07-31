@@ -8,7 +8,10 @@ public class PlayerActionController : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField] private PlayerController m_Player;
     [SerializeField] private Tilemap m_Tilemap;
+    private GameObject Object;
     private TileBase CurrTile;
+
+
     void Start()
     {
         
@@ -23,24 +26,44 @@ public class PlayerActionController : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter2D(Collider2D other) {
-        TreeController NewObject = other.gameObject.GetComponent<TreeController>();
+    private void OnTriggerStay2D(Collider2D other) {
+        OnMapObjectController NewObject = other.gameObject.GetComponent<OnMapObjectController>();
         
         if(NewObject != null)
         {
-            print(other.gameObject.name);
+            Object = NewObject.gameObject;
+            m_Player.SetAction(Action.Cut);
             m_Player.Chop(true);
         }
     }
 
     private void OnTriggerExit2D(Collider2D other) {
-        TreeController NewObject = other.gameObject.GetComponent<TreeController>();
+        OnMapObjectController NewObject = other.gameObject.GetComponent<OnMapObjectController>();
         
         if(NewObject != null)
         {
-            print(other.gameObject.name);
+            Object = null;
+            m_Player.SetAction(Action.None);
             m_Player.Chop(false);
         }
-
     }
+
+    public void TriggerAction(Action m_Action)
+    {
+        if(Object == null)return;
+        switch(m_Action)
+        {
+            case Action.Cut : Object.GetComponent<OnMapObjectController>().SelfDestroy(); break;
+            
+        }
+    }
+}
+
+public enum Action
+{
+    None,
+    Cut,
+    Hoe,
+    Dig,
+    Pick,
 }

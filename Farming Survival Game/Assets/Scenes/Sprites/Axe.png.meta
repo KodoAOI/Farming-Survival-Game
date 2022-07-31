@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 082fb407d4802b54b9badb146461d3a8
+guid: 065f16dea8c460448bbbcd77e4fb28a4
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -42,7 +42,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -114,49 +114,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: AppleTree_allSeasons---Copy_0
-      rect:
-        serializedVersion: 2
-        x: 318
-        y: 112
-        width: 50
-        height: 38
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5f09bf05a12fc154292c2748de8bf4a6
-      internalID: 1655130036
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: AppleTree_allSeasons---Copy_1
-      rect:
-        serializedVersion: 2
-        x: 294
-        y: 166
-        width: 85
-        height: 80
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 88eceb0f1db3b3f4197376566e03a626
-      internalID: -1746730366
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
+    sprites: []
     outline: []
     physicsShape: []
     bones: []
@@ -167,9 +125,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      AppleTree_allSeasons---Copy_0: -773722967
-      AppleTree_allSeasons---Copy_1: 211341059
+    nameFileIdTable: {}
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

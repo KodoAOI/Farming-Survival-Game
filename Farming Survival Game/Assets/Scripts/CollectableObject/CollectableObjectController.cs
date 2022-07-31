@@ -6,13 +6,15 @@ public class CollectableObjectController : MonoBehaviour
 {
     // Start is called before the first frame update
     [SerializeField] private CollectableType m_Type;
-    [SerializeField] private ObjectPool m_Pool;
+    [SerializeField] private int m_MaxStack;
+    public CollectableObjectPool m_Pool;
     public Sprite Icon;
 
     public Rigidbody2D rb2d;
 
     private void Awake()
     {
+        m_Pool = FindObjectOfType<CollectableObjectsPool>().m_Pool[m_Type];
         rb2d = GetComponent<Rigidbody2D>();
     }
 
@@ -28,7 +30,7 @@ public class CollectableObjectController : MonoBehaviour
     
     void Start()
     {
-        m_Pool.m_CollectableObjectPool.m_PoolType = m_Type;
+        
     }
 
     // Update is called once per frame
@@ -42,17 +44,13 @@ public class CollectableObjectController : MonoBehaviour
         if(other.GetComponent<PlayerController>() != null && other.tag == "Player")
         {
             GetCollideWith = other;
-            // m_Pool.m_CollectableObjectPool.Release(this);
         }
-        // print(other);
-        // PlayerController obj = other.GetComponent<PlayerController>();
-        // if(obj != null && obj.tag == "Player") gameObject.SetActive(false);
+
     }
 
     public void SelfDestroy()
     {
-        m_Pool.m_CollectableObjectPool.Release(this);
-        gameObject.SetActive(false);
+        m_Pool.Release(this);
     }
 
     private void OnTriggerExit2D(Collider2D other) {
@@ -60,12 +58,26 @@ public class CollectableObjectController : MonoBehaviour
             GetCollideWith = null;
     }
 
-    
+    public CollectableObjectPool GetPool()
+    {   
+        return FindObjectOfType<CollectableObjectsPool>().m_Pool[m_Type];
+    }
+
+    public int GetStack()
+    {
+        return m_MaxStack;
+    }
 }
 
 public enum CollectableType
 {
     NONE, 
+    //Farming Productions
     Carrot,
-    Chili
+    Chili,
+    //Tools
+    Axe,
+    Pickaxe,
+    Shovel,
+    Hoe
 }

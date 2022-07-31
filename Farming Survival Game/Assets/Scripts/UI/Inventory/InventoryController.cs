@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class InventoryController : MonoBehaviour
 {
-    [SerializeField] private int m_MaxStack;
+    // [SerializeField] private int m_MaxStack;
     [SerializeField] ObjectInformationPanel m_ObjectInformationPanel;
     public List<Slot> Slots = new List<Slot>();
     public int NumSlots;
@@ -15,10 +15,10 @@ public class InventoryController : MonoBehaviour
         public CollectableType Type;
         public Sprite m_Icon;
 
-        public Slot(int m_MaxStack)
+        public Slot()
         {
             Count = 0;
-            MaxCount = m_MaxStack;
+            MaxCount = 0;
             Type = CollectableType.NONE;
         }
 
@@ -26,6 +26,7 @@ public class InventoryController : MonoBehaviour
         {
             Type = Object.Getter();
             m_Icon = Object.Icon;
+            MaxCount = Object.GetStack();
             Count++;
         }
         
@@ -50,7 +51,7 @@ public class InventoryController : MonoBehaviour
     {
         for(int i = 0; i < NumSlots; i++)
         {
-            Slot slot = new Slot(m_MaxStack);
+            Slot slot = new Slot();
             Slots.Add(slot);
         }
     }

@@ -2,26 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObjectPool : MonoBehaviour
-{
-    // Start is called before the first frame update
-    public CollectableObjectPool m_CollectableObjectPool = new CollectableObjectPool();
-    [SerializeField] private CollectableType m_Type;
-    [SerializeField] private List<CollectableObjectController> m_Objects;
-    [ContextMenu("Start")]
-    void Start()
-    {
-        m_CollectableObjectPool.m_PoolType = m_Type;
-        m_CollectableObjectPool.m_ActiveObject.AddRange(m_Objects);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-}
-
 public class CollectableObjectPool
 {
     public List<CollectableObjectController> m_ActiveObject = new List<CollectableObjectController>();
@@ -29,6 +9,10 @@ public class CollectableObjectPool
     public CollectableType m_PoolType;
     public CollectableObjectController m_Object;
 
+    public CollectableObjectPool(CollectableType Type)
+    {
+        m_PoolType = Type;
+    }
     public CollectableObjectController Spawn(Vector2 Position, Transform Parent)
     {
         if(m_InactiveObject.Count <= 0)

@@ -182,4 +182,9 @@ public class PlayerController : MonoBehaviour
     {
         m_Action = action;
     }
+    public void InventorySwap(int idx1, int idx2)
+    {
+        m_Inventory.Swap(idx1, idx2);
+    }
+
 }

@@ -6,8 +6,32 @@ public class InventoryController : MonoBehaviour
 {
     // [SerializeField] private int m_MaxStack;
     [SerializeField] ObjectInformationPanel m_ObjectInformationPanel;
+    [SerializeField] private int m_MaxStack;
+    [SerializeField] private ObjectInformationPanel m_ObjectInformationPanel;
+    [SerializeField] private Inventory_UI m_InventoryUI;
+    [SerializeField] private TransparentObject m_TransparentObject;
     public List<Slot> Slots = new List<Slot>();
     public int NumSlots;
+
+    private void Update()
+    {
+        if(m_InventoryUI.gameObject.activeSelf == true)
+        {
+            if(m_TransparentObject.gameObject.activeSelf == false)
+            {
+                m_TransparentObject.gameObject.SetActive(true);
+            }
+        }
+
+        if(m_InventoryUI.gameObject.activeSelf == false)
+        {
+            if(m_TransparentObject.gameObject.activeSelf == true)
+            {
+                m_TransparentObject.gameObject.SetActive(false);
+            }
+        }
+    }
+
     public class Slot
     {
         public int Count;
@@ -91,5 +115,13 @@ public class InventoryController : MonoBehaviour
         {
             m_ObjectInformationPanel.ResetInformationPanel();
         }
+    }
+
+    public void Swap(int idx1, int idx2)
+    {
+        if(idx1 == -1 || idx2 == -1)    return;
+        Slot tmp = Slots[idx1];
+        Slots[idx1] = Slots[idx2];
+        Slots[idx2] = tmp;
     }
 }

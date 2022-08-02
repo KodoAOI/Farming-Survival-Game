@@ -100,7 +100,7 @@ public class PlayerActionController : MonoBehaviour
     public bool CanWater()
     {
         var Position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        return m_TileController.CanWater(MousePosition);
+        return m_TileController.CanWater(m_Player, MousePosition);
     }
 
 }

@@ -40,10 +40,11 @@ public class TileController : MonoBehaviour
       return (PlayerLocation - NewLocation).magnitude <= m_MaxLengthPlace && m_UnWateredCropTileMap.GetTile(NewLocation) == null;
    }
 
-   public bool CanWater(Vector3 Position)
+   public bool CanWater(PlayerController m_Player,Vector3 Position)
    {
-       Vector3Int NewLocation = m_TileMap.WorldToCell(Position);
-       return (m_UnWateredCropTileMap.GetTile(NewLocation) != null && m_WateredCropTileMap.GetTile(NewLocation) == null);
+      Vector3Int PlayerLocation = m_TileMap.WorldToCell(m_Player.transform.position);
+      Vector3Int NewLocation = m_TileMap.WorldToCell(Position);
+      return (PlayerLocation - NewLocation).magnitude <= m_MaxLengthPlace && m_UnWateredCropTileMap.GetTile(NewLocation) != null && m_WateredCropTileMap.GetTile(NewLocation) == null;
    }
 
    public void SetWateredTile(Vector3 Position)

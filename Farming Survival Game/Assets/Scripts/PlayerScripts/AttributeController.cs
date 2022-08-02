@@ -19,8 +19,8 @@ public class AttributeController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        m_Health.text = CurrHealth.ToString() + " / " + MaxHealth.ToString();
-        m_Food.text = CurrFood.ToString() + " / " + MaxFood.ToString();
-        m_Stamina.text = CurrStamina.ToString() + " / " + MaxStamina.ToString();
+        // m_Health.text = CurrHealth.ToString() + " / " + MaxHealth.ToString();
+        // m_Food.text = CurrFood.ToString() + " / " + MaxFood.ToString();
+        // m_Stamina.text = CurrStamina.ToString() + " / " + MaxStamina.ToString();
     }
 }

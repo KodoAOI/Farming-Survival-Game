@@ -80,7 +80,9 @@ public class InventoryController : MonoBehaviour
             Slots.Add(slot);
         }
     }
-
+    private void Start() {
+        print(Slots.Count);
+    }
     public void Add(CollectableObjectController Object)
     {
         bool Flag = false;

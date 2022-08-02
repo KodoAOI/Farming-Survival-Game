@@ -93,11 +93,14 @@ public class PlayerController : MonoBehaviour
                             m_AttributeUIController.SetAction(m_Action);
                             m_PlayerActionController.SetCropPosition(Position);
                         }
+                        else
+                        {
+                            
+                        }
                         TempItemOnHand = CurrItemOnHand;
                     }
                     
-                    m_AttributeUIController.MakeProgressBar(2.0f);
-                    m_AttributeUIController.SetAction(m_Action);
+                    
                 }
                 catch{}
             }

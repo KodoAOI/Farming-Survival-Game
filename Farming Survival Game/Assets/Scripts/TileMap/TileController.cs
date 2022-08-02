@@ -11,7 +11,7 @@ public class TileController : MonoBehaviour
    public RuleTile m_WateredCropTile;
    public Tilemap m_UnWateredCropTileMap;
    public Tilemap m_WateredCropTileMap;
-   [SerializeField] private int m_MaxLengthPlace;
+   [SerializeField] private float m_MaxLengthPlace;
    Vector3Int Location = Vector3Int.zero;
 
    private void Start() {

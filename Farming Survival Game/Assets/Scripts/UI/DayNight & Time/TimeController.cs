@@ -25,24 +25,24 @@ public class TimeController : MonoBehaviour
         
         if(CurrTime <= TotalSecondInNight / 2)
         {
-            print("Dawn");
+            // print("Dawn");
             SetUpLight(TotalSecondInNight/2 - CurrTime, TotalSecondInNight/2);
             m_TimeInDay = TimeInDay.Morning;
         }
         else if(CurrTime >= TotalSecondInDay && CurrTime <= TotalSecondInDay + TotalSecondInNight / 2)
         {
-            print("Night");
+            // print("Night");
             SetUpLight(CurrTime - TotalSecondInDay, TotalSecondInNight/2);
             m_TimeInDay = TimeInDay.Night;
         }
         else if(CurrTime <= TotalSecondADay && CurrTime >= TotalSecondInDay)
         {
-            print("MidNight");
+            // print("MidNight");
             SetUpLight(1, 1);
         }
         else 
         {
-            print("Noon");
+            // print("Noon");
             SetUpLight(0, 1);
         }
         // print(CurrTime);

@@ -10,16 +10,17 @@ public class CollectableObjectController : MonoBehaviour
     [SerializeField] private Action m_Action;
     public CollectableObjectPool m_Pool;
     public Sprite Icon;
-
+    public bool CollectableOrNot;
     public Rigidbody2D rb2d;
 
     private void Awake()
     {
+        CollectableOrNot = true;
         m_Pool = FindObjectOfType<CollectableObjectsPool>().m_Pool[m_Type];
         rb2d = GetComponent<Rigidbody2D>();
     }
 
-    public CollectableType Getter()
+    public CollectableType GetCollectableType()
     {
         return m_Type;
     }
@@ -32,6 +33,17 @@ public class CollectableObjectController : MonoBehaviour
     void Start()
     {
         
+    }
+
+    private void ChangeCollectableOrNot()
+    {
+        CollectableOrNot = true;
+    }
+
+    public void CallInvokeChangeCollectableOrNot()
+    {
+        CollectableOrNot = false;
+        Invoke("ChangeCollectableOrNot", 1.25f);
     }
 
     // Update is called once per frame

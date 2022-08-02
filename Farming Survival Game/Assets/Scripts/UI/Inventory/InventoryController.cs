@@ -48,7 +48,7 @@ public class InventoryController : MonoBehaviour
 
         public void Add(CollectableObjectController Object)
         {
-            Type = Object.Getter();
+            Type = Object.GetCollectableType();
             m_Icon = Object.Icon;
             MaxCount = Object.GetStack();
             m_Action = Object.GetAction();
@@ -86,7 +86,7 @@ public class InventoryController : MonoBehaviour
         bool Flag = false;
         foreach(Slot slot in Slots)
         {
-            if(slot.Type == Object.Getter())
+            if(slot.Type == Object.GetCollectableType())
             {
                 if(slot.Count < slot.MaxCount)
                 {

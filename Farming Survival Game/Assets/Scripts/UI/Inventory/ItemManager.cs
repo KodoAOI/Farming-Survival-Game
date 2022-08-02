@@ -18,9 +18,9 @@ public class ItemManager : MonoBehaviour
 
     private void AddItem(CollectableObjectController item)
     {
-        if(!collectableItemsDict.ContainsKey(item.Getter()))
+        if(!collectableItemsDict.ContainsKey(item.GetCollectableType()))
         {
-            collectableItemsDict.Add(item.Getter(), item);
+            collectableItemsDict.Add(item.GetCollectableType(), item);
         }
     }
 

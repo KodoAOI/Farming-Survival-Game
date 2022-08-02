@@ -14,7 +14,7 @@ public class Inventory_UI : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // m_InventoryPanel.SetActive(false); ???
+        // m_InventoryPanel.SetActive(false); // thang nao viet dong cua no nay vao day?
         for(int i = 0; i < slots.Count; i++)
         {
             slots[i].SlotIdx = i;
@@ -68,7 +68,7 @@ public class Inventory_UI : MonoBehaviour
     {
         if(m_ObjectInformationPanel.m_SlotIdx == -1)    return;
         int num = m_Player.GetCollectableCount(m_ObjectInformationPanel.m_SlotIdx);
-        Vector3 SpawnPoint = m_Player.RandomPointInAnnulus(m_Player.transform.position, 1f, 1.25f);
+        Vector3 SpawnPoint = m_Player.RandomPointInAnnulus(m_Player.transform.position, 0.5f, 0.75f);
         for(int i = 0; i < num; i++)
         {
             

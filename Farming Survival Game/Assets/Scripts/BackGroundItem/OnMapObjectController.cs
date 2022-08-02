@@ -26,11 +26,11 @@ public class OnMapObjectController : MonoBehaviour
     private void DropItem()
     {
         PlayerController m_Player = FindObjectOfType<PlayerController>();
-        Vector3 SpawnPoint = m_Player.RandomPointInAnnulus(m_Player.transform.position, 1f, 1.25f);
+        Vector3 SpawnPoint = m_Player.RandomPointInAnnulus(transform.position, 0.35f, 0.5f);
         foreach(CollectableObjectController item in ItemsDropper)
         {
             Vector3 SpawnOffset = UnityEngine.Random.insideUnitCircle * 0.1f; 
-            m_Player.DropAllItem(item, SpawnPoint + SpawnOffset);
+            m_Player.DropAllFromObject(item, SpawnPoint + SpawnOffset, gameObject);
             
             // Vector3 spawnLocation = transform.position;
             // Vector3 spawnOffset = UnityEngine.Random.insideUnitCircle * 1.25f;

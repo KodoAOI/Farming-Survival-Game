@@ -25,7 +25,6 @@ public class Slot_UI : MonoBehaviour, IDropHandler
     {
         if(m_CloneSlot != null && m_CloneSlot.gameObject.activeSelf == true && m_ObjectInformationPanel.m_SlotIdx != -1 && m_Player.GetCollectableCount(m_ObjectInformationPanel.m_SlotIdx) == 0)
         {
-            Debug.Log("SetActiveFalseSuccess!!!");
             m_CloneSlot.GetComponent<DragDrop>().SetActiveFalse();
         }
 
@@ -86,7 +85,6 @@ public class Slot_UI : MonoBehaviour, IDropHandler
 
     public void OnClick1()
     {
-        print("Success!!!");
         if(m_ItemIcon.sprite != null)
         {
             m_CloneSlot.gameObject.SetActive(true);
@@ -99,10 +97,10 @@ public class Slot_UI : MonoBehaviour, IDropHandler
 
     public void OnDrop(PointerEventData eventData)
     {
-        Debug.Log("OnDrop");
+        // Debug.Log("OnDrop");
         if(eventData.pointerDrag != null)
         {
-            Debug.Log(eventData.pointerDrag);
+            // Debug.Log(eventData.pointerDrag);
             // int idx = m_ObjectInformationPanel.m_SlotIdx;
             // eventData.pointerDrag.GetComponent<RectTransform>().anchoredPosition = m_FirstSlotPosition.position + new Vector3(135 * (idx % 9), -(135 * (idx / 9)), 0);
             // m_ItemIcon.color = new Color(0.4f, 0.65f, 0.23f, 1);

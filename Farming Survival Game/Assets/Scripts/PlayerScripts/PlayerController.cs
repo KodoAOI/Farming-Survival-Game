@@ -95,6 +95,9 @@ public class PlayerController : MonoBehaviour
                         }
                         TempItemOnHand = CurrItemOnHand;
                     }
+                    
+                    m_AttributeUIController.MakeProgressBar(2.0f);
+                    m_AttributeUIController.SetAction(m_Action);
                 }
                 catch{}
             }
@@ -125,6 +128,11 @@ public class PlayerController : MonoBehaviour
             transform.localScale= new Vector3(-1, 1, 1) * m_Scale;
     }
 
+    public float GetMoveDirection()
+    {
+        return transform.localScale.x;
+    }
+
     private void FixedUpdate() 
     {
         rb.velocity = m_MoveDirection * m_movespeed;
@@ -150,11 +158,12 @@ public class PlayerController : MonoBehaviour
         m_Animator.SetBool("Run", false);
     }
 
-    private void OnTriggerEnter2D(Collider2D other) {
+    private void OnTriggerStay2D(Collider2D other) {
         CollectableObjectController m_object = other.GetComponent<CollectableObjectController>();
 
-        if(m_object != null && m_object.tag == "CollectableObject" && m_object.GetCollideWith == gameObject.GetComponent<Collider2D>())
+        if(m_object != null && m_object.tag == "CollectableObject" && m_object.GetCollideWith == gameObject.GetComponent<Collider2D>() && m_object.CollectableOrNot)
         {
+            
             m_Inventory.Add(m_object);
             m_object.SelfDestroy();
         }
@@ -193,17 +202,24 @@ public class PlayerController : MonoBehaviour
     {
         Vector3 spawnLocation = transform.position;
 
-        Vector3 spawnPoint = RandomPointInAnnulus(spawnLocation, 1f, 1.25f);
+        Vector3 spawnPoint = RandomPointInAnnulus(spawnLocation, 0.25f, 0.5f);
 
-        CollectableObjectController droppedItem = m_CollectableObjectsPool.m_Pool[item.Getter()].Spawn(spawnPoint,null);//Instantiate(item, spawnLocation + spawnOffset, Quaternion.identity);
-        droppedItem.rb2d.AddForce((spawnPoint - spawnLocation) * .1f, ForceMode2D.Impulse);
+        CollectableObjectController droppedItem = m_CollectableObjectsPool.m_Pool[item.GetCollectableType()].Spawn(spawnPoint,null);//Instantiate(item, spawnLocation + spawnOffset, Quaternion.identity);
+        droppedItem.rb2d.AddForce((spawnPoint - spawnLocation) * 3f, ForceMode2D.Impulse);
+        ChangeCollectableOrNot(droppedItem);
     }
 
     public void DropAllItem(CollectableObjectController item, Vector3 spawnPoint)
     {
         Vector3 spawnLocation = transform.position;
-        CollectableObjectController droppedItem = m_CollectableObjectsPool.m_Pool[item.Getter()].Spawn(spawnPoint,null);//Instantiate(item, spawnLocation + spawnOffset, Quaternion.identity);
-        droppedItem.rb2d.AddForce((spawnPoint - spawnLocation) * .1f, ForceMode2D.Impulse);
+        CollectableObjectController droppedItem = m_CollectableObjectsPool.m_Pool[item.GetCollectableType()].Spawn(spawnPoint,null);//Instantiate(item, spawnLocation + spawnOffset, Quaternion.identity);
+        droppedItem.rb2d.AddForce((spawnPoint - spawnLocation) * 3f, ForceMode2D.Impulse);
+        ChangeCollectableOrNot(droppedItem);
+    }
+
+    private void ChangeCollectableOrNot(CollectableObjectController item)
+    {
+        item.CallInvokeChangeCollectableOrNot();
     }
 
     public Vector2 RandomPointInAnnulus(Vector2 origin, float minRadius, float maxRadius)
@@ -216,6 +232,37 @@ public class PlayerController : MonoBehaviour
         var point = origin + randomDirection * randomDistance;
  
         return point;
+    }
+
+    public void DropItemAhead(CollectableObjectController item)
+    {
+        Vector3 spawnLocation = transform.position;
+
+        Vector3 spawnPoint = RandomPointAheadPlayer(spawnLocation, 0.25f, 0.5f);
+
+        CollectableObjectController droppedItem = m_CollectableObjectsPool.m_Pool[item.GetCollectableType()].Spawn(spawnPoint,null);//Instantiate(item, spawnLocation + spawnOffset, Quaternion.identity);
+        droppedItem.rb2d.AddForce((spawnPoint - spawnLocation) * 3f, ForceMode2D.Impulse);
+        ChangeCollectableOrNot(droppedItem);
+    }
+
+    public Vector2 RandomPointAheadPlayer(Vector2 origin, float minRadius, float maxRadius)
+    {
+ 
+        var randomDirection = new Vector2 (GetMoveDirection(), 1).normalized;
+ 
+        var randomDistance = UnityEngine.Random.Range(minRadius, maxRadius);
+ 
+        var point = origin + randomDirection * randomDistance;
+ 
+        return point;
+    }
+
+    public void DropAllFromObject(CollectableObjectController item, Vector3 spawnPoint, GameObject obj)
+    {
+        Vector3 spawnLocation = obj.transform.position;
+        CollectableObjectController droppedItem = m_CollectableObjectsPool.m_Pool[item.GetCollectableType()].Spawn(spawnPoint,null);//Instantiate(item, spawnLocation + spawnOffset, Quaternion.identity);
+        droppedItem.rb2d.AddForce((spawnPoint - spawnLocation) * 2.5f, ForceMode2D.Impulse);
+        ChangeCollectableOrNot(droppedItem);
     }
 
     public void SetItemOnHand(InventoryController.Slot item)

@@ -7,6 +7,7 @@ public class CollectableObjectController : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField] private CollectableType m_Type;
     [SerializeField] private int m_MaxStack;
+    [SerializeField] private Action m_Action;
     public CollectableObjectPool m_Pool;
     public Sprite Icon;
 
@@ -67,6 +68,11 @@ public class CollectableObjectController : MonoBehaviour
     {
         return m_MaxStack;
     }
+
+    public Action GetAction()
+    {
+        return m_Action;
+    }
 }
 
 public enum CollectableType
@@ -79,5 +85,6 @@ public enum CollectableType
     Axe,
     Pickaxe,
     Shovel,
-    Hoe
+    Hoe,
+    WateringCan
 }

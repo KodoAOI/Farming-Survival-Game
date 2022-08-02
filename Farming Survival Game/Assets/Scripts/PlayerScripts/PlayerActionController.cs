@@ -9,8 +9,16 @@ public class PlayerActionController : MonoBehaviour
     [SerializeField] private PlayerController m_Player;
     [SerializeField] private Tilemap m_Tilemap;
     private List<OnMapObjectController> ObjectOnQueue = new List<OnMapObjectController>();
-    private GameObject Object;
+    [SerializeField]private TileController m_TileController;
     private TileBase CurrTile;
+    private Vector3 CropPosition;
+    private Vector3 MousePosition;
+    public bool CanCut = false;
+    
+    public TileController GetTileController()
+    {
+        return m_TileController;
+    }
 
 
     void Start()
@@ -21,10 +29,10 @@ public class PlayerActionController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector3 Pos = m_Player.transform.position;
-        Vector3Int Location = m_Tilemap.WorldToCell(Pos);
-        CurrTile = m_Tilemap.GetTile(Location);
-        
+        if(m_Player.GetCurrItem() != null && m_Player.CanAction)m_Player.SetAction(m_Player.GetCurrItem().m_Action);
+        else m_Player.CanAction = true;
+
+        MousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
     }
 
     private bool MapObjectFind(OnMapObjectController Object)
@@ -44,8 +52,11 @@ public class PlayerActionController : MonoBehaviour
         if(NewObject != null)
         {
             if(MapObjectFind(NewObject))ObjectOnQueue.Add(NewObject);
-            m_Player.SetAction(Action.Cut);
-            m_Player.Chop(true);
+            if(NewObject.GetAction() == Action.Cut)
+            {
+                CanCut = true;
+                m_Player.Chop(true);
+            }
         }
     }
 
@@ -57,7 +68,7 @@ public class PlayerActionController : MonoBehaviour
             ObjectOnQueue.Remove(NewObject);
             if(ObjectOnQueue.Count == 0)
             {
-                m_Player.SetAction(Action.None);
+                CanCut = false;
                 m_Player.Chop(false);
             } 
            
@@ -66,14 +77,32 @@ public class PlayerActionController : MonoBehaviour
 
     public void TriggerAction(Action m_Action)
     {
-        if(ObjectOnQueue.Count == 0)return;
+        if(m_Action == Action.None)return;
         switch(m_Action)
         {
-            case Action.Cut : ObjectOnQueue[0].GetComponent<OnMapObjectController>().SelfDestroy(); break;
-            case Action.Hoe : break;
-            
+            case Action.Cut : if(ObjectOnQueue.Count > 0) ObjectOnQueue[0].GetComponent<OnMapObjectController>().SelfDestroy(); break;
+            case Action.Hoe : m_TileController.SetCropTile(m_Player, CropPosition); break;
+            case Action.Water : m_TileController.SetWateredTile(CropPosition); break;
+            default : print("Quen Setup Kia!!!"); break;            
         }
     }
+
+    public void SetCropPosition(Vector3 Position)
+    {
+        CropPosition = Position;
+    }
+
+    public bool CanCrop()
+    {
+        return m_TileController.CanCrop(m_Player, MousePosition);
+    }
+
+    public bool CanWater()
+    {
+        var Position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        return m_TileController.CanWater(MousePosition);
+    }
+
 }
 
 public enum Action
@@ -83,4 +112,5 @@ public enum Action
     Hoe,
     Dig,
     Pick,
+    Water,
 }

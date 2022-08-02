@@ -37,12 +37,13 @@ public class InventoryController : MonoBehaviour
         public int MaxCount;
         public CollectableType Type;
         public Sprite m_Icon;
-
+        public Action m_Action;
         public Slot()
         {
             Count = 0;
             MaxCount = 0;
             Type = CollectableType.NONE;
+            m_Action = Action.None;
         }
 
         public void Add(CollectableObjectController Object)
@@ -50,6 +51,7 @@ public class InventoryController : MonoBehaviour
             Type = Object.Getter();
             m_Icon = Object.Icon;
             MaxCount = Object.GetStack();
+            m_Action = Object.GetAction();
             Count++;
         }
         

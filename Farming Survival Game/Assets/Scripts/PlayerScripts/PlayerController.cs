@@ -24,18 +24,12 @@ public class PlayerController : MonoBehaviour
     private PlayerActionController m_ActionCollider;
     private InventoryController.Slot CurrItemOnHand;
     private Action m_Action;
-
+    private InventoryController.Slot TempItemOnHand;
+    public bool CanAction = true;
     public bool Active = true;
     public float CurrHealth, CurrFood, CurrStamina;
     public float MaxHealth, MaxFood, MaxStamina;
 
-     Dictionary<CollectableType, Action> ItemTriggerDictionary = new Dictionary<CollectableType, Action>()
-    {
-        {CollectableType.Axe, Action.Cut},
-        {CollectableType.Hoe, Action.Hoe},
-        {CollectableType.Carrot, Action.None}
-        
-    };
     private void OnEnable() 
     {
         m_InputAction.Enable();
@@ -64,7 +58,10 @@ public class PlayerController : MonoBehaviour
         rb.freezeRotation = true;
     }
 
-    // Update is called once per frame
+    public InventoryController.Slot GetCurrItem()
+    {
+        return CurrItemOnHand;
+    }
     void Update()
     {
         if(!Active)return;
@@ -73,19 +70,40 @@ public class PlayerController : MonoBehaviour
         {
             if(Input.GetKeyDown(KeyCode.Space))
             {
+                CanAction = true;
                 try
                 {
-                    if(ItemTriggerDictionary[CurrItemOnHand.Type] == m_Action)
+                    if(CurrItemOnHand.m_Action == m_Action)
                     {
-                        m_AttributeUIController.MakeProgressBar(2.0f);
-                        m_AttributeUIController.SetAction(m_Action);
+                        var Position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+                        if(m_Action == Action.Hoe && m_PlayerActionController.CanCrop())
+                        {
+                            m_AttributeUIController.MakeProgressBar(2.0f);
+                            m_AttributeUIController.SetAction(m_Action);
+                            m_PlayerActionController.SetCropPosition(Position);
+                        }
+                        else if(m_Action == Action.Cut && m_PlayerActionController.CanCut)
+                        {
+                            m_AttributeUIController.MakeProgressBar(2.0f);
+                            m_AttributeUIController.SetAction(m_Action);
+                        }
+                        else if(m_Action == Action.Water && m_PlayerActionController.CanWater())
+                        {
+                            m_AttributeUIController.MakeProgressBar(2.0f);
+                            m_AttributeUIController.SetAction(m_Action);
+                            m_PlayerActionController.SetCropPosition(Position);
+                        }
+                        TempItemOnHand = CurrItemOnHand;
                     }
                 }
                 catch{}
             }
         }
-        if(m_Action == Action.None)
+        if(m_Action == Action.None || TempItemOnHand != CurrItemOnHand)
+        {
             m_AttributeUIController.TurnOffProgressBar();
+            TempItemOnHand = null;
+        }
         //Update Attribute Information
         m_AttributeController.CurrHealth = CurrHealth;
         m_AttributeController.CurrFood = CurrFood;
@@ -94,7 +112,11 @@ public class PlayerController : MonoBehaviour
         //Movement
         m_MoveDirection = m_InputAction.ReadValue<Vector2>();
         if(m_MoveDirection != Vector2.zero)
+        {
             Run();
+            SetAction(Action.None); //reset action
+            CanAction = false;
+        }
         else
             Idle();
         if(m_MoveDirection.x > 0)
@@ -209,5 +231,8 @@ public class PlayerController : MonoBehaviour
     {
         m_Inventory.Swap(idx1, idx2);
     }
-
+    public Action GetAction()
+    {
+        return m_Action;
+    }
 }

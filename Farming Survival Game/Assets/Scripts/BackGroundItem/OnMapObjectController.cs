@@ -5,6 +5,7 @@ using UnityEngine;
 public class OnMapObjectController : MonoBehaviour
 {
     public CollectableObjectController[] ItemsDropper;
+    [SerializeField]private Action m_Action;
     // Start is called before the first frame update
     void Start()
     {
@@ -36,5 +37,9 @@ public class OnMapObjectController : MonoBehaviour
             // CollectableObjectController droppedItem = item.GetPool().Spawn(spawnLocation + spawnOffset, FindObjectOfType<CollectableObjectsPool>().transform);//Instantiate(item, spawnLocation + spawnOffset, Quaternion.identity);
             // droppedItem.rb2d.AddForce(spawnOffset * .2f, ForceMode2D.Impulse);
         }
+    }
+    public Action GetAction()
+    {
+        return m_Action;
     }
 }

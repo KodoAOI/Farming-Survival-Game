@@ -5727,6 +5727,7 @@ MonoBehaviour:
   m_CollectableObjectsPool: {fileID: 384963558}
   m_AttributeUIController: {fileID: 1901831430}
   m_PlayerActionController: {fileID: 1659301321}
+  CanAction: 1
   Active: 1
   CurrHealth: 0
   CurrFood: 0
@@ -5851,7 +5852,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5870,7 +5871,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -857708755
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -983643776, guid: 6422419538b2fe34db17a66bf525e9c1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -6543,7 +6544,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -857708755
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: -159837085, guid: 4dd0a3e64baa9b44f9e74bc374e2616d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -7456,6 +7457,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TileSelect: {fileID: 11400000, guid: b0b0dd671fb09e74b8b1ffab87e05f04, type: 2}
   m_TileMap: {fileID: 2064483948}
+  m_UnWateredCropTile: {fileID: 0}
+  m_WateredCropTile: {fileID: 0}
+  m_UnWateredCropTileMap: {fileID: 0}
+  m_WateredCropTileMap: {fileID: 0}
+  m_MaxLengthPlace: 0
 --- !u!156049354 &797127690
 Grid:
   m_ObjectHideFlags: 0
@@ -9856,7 +9862,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -18471,6 +18477,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Player: {fileID: 610328130}
   m_Tilemap: {fileID: 2112276227}
+  m_TileController: {fileID: 0}
+  CanCut: 0
 --- !u!61 &1659301322
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -21893,7 +21901,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -21912,7 +21920,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -857708755
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -22561,7 +22569,7 @@ TilemapRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -22580,7 +22588,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -857708755
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}

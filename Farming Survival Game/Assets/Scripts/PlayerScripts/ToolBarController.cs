@@ -45,6 +45,18 @@ public class ToolBarController : MonoBehaviour
                     m_SlotUI[ActiveSlot].ShowTarget();
                     break;
                 }
+            
+            if(Input.GetKeyDown(KeyCode.Q))
+            {
+                CollectableObjectController itemToDrop = ItemGameManager.instance.itemManager.GetItemByType(m_Player.GetCollectableType(ActiveSlot));
+
+                if(itemToDrop != null)
+                {
+                    m_Player.DropItemAhead(itemToDrop);
+                    m_Player.Remove(ActiveSlot);
+                    m_InventoryUI.Setup(true);
+                }
+            }
         }
         Vector2 Scroll = Input.mouseScrollDelta;
         if(Scroll != Vector2.zero)

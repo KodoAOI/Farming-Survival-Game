@@ -7,7 +7,7 @@ public class CollectableObjectsPool : MonoBehaviour
     // Start is called before the first frame update
     [SerializeField] private List<CollectableObjectController> Objects;
  
-    public Dictionary<CollectableType, CollectableObjectPool> m_Pool = new Dictionary<CollectableType, CollectableObjectPool>()
+    public Dictionary<CollectableType, CollectableObjectPool> m_Pool = new Dictionary<CollectableType, CollectableObjectPool>() // CollectableType la enum trong CollectableObjectController
     {
         {CollectableType.Carrot, new CollectableObjectPool(CollectableType.Carrot)},
         {CollectableType.Chili, new CollectableObjectPool(CollectableType.Chili)},
@@ -20,7 +20,7 @@ public class CollectableObjectsPool : MonoBehaviour
         {
             foreach(var obj in Objects)
             {
-                if(obj.Getter() == Pool.Key)
+                if(obj.GetCollectableType() == Pool.Key)
                     Pool.Value.m_Object = obj;
             }
         }

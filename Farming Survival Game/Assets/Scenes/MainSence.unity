@@ -850,13 +850,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1057887301}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneFill
+      value: 
+      objectReference: {fileID: 654918836}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_CloneSlot
       value: 
       objectReference: {fileID: 1412289697}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneBorder
+      value: 
+      objectReference: {fileID: 547827015}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_InventoryUI
       value: 
       objectReference: {fileID: 1352694655}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneDurability
+      value: 
+      objectReference: {fileID: 864821908}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_FirstSlotPosition
       value: 
@@ -1765,13 +1777,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1057887301}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneFill
+      value: 
+      objectReference: {fileID: 654918836}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_CloneSlot
       value: 
       objectReference: {fileID: 1412289697}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneBorder
+      value: 
+      objectReference: {fileID: 547827015}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_InventoryUI
       value: 
       objectReference: {fileID: 1352694655}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneDurability
+      value: 
+      objectReference: {fileID: 864821908}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_FirstSlotPosition
       value: 
@@ -11032,13 +11056,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1057887301}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneFill
+      value: 
+      objectReference: {fileID: 654918836}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_CloneSlot
       value: 
       objectReference: {fileID: 1412289697}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneBorder
+      value: 
+      objectReference: {fileID: 547827015}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_InventoryUI
       value: 
       objectReference: {fileID: 1352694655}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneDurability
+      value: 
+      objectReference: {fileID: 864821908}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_FirstSlotPosition
       value: 
@@ -11254,13 +11290,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1057887301}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneFill
+      value: 
+      objectReference: {fileID: 654918836}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_CloneSlot
       value: 
       objectReference: {fileID: 1412289697}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneBorder
+      value: 
+      objectReference: {fileID: 547827015}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_InventoryUI
       value: 
       objectReference: {fileID: 1352694655}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneDurability
+      value: 
+      objectReference: {fileID: 864821908}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_FirstSlotPosition
       value: 
@@ -11962,13 +12010,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1057887301}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneFill
+      value: 
+      objectReference: {fileID: 654918836}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_CloneSlot
       value: 
       objectReference: {fileID: 1412289697}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneBorder
+      value: 
+      objectReference: {fileID: 547827015}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_InventoryUI
       value: 
       objectReference: {fileID: 1352694655}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneDurability
+      value: 
+      objectReference: {fileID: 864821908}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_FirstSlotPosition
       value: 
@@ -12122,6 +12182,10 @@ MonoBehaviour:
   m_FirstSlotPosition: {fileID: 0}
   m_Player: {fileID: 1057887301}
   m_Durability: {fileID: 1969072433}
+  m_Fill: {fileID: 0}
+  m_Border: {fileID: 0}
+  m_CloneFill: {fileID: 0}
+  m_CloneBorder: {fileID: 0}
   SlotIdx: 0
 --- !u!224 &318985565 stripped
 RectTransform:
@@ -12336,13 +12400,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1057887301}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneFill
+      value: 
+      objectReference: {fileID: 654918836}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_CloneSlot
       value: 
       objectReference: {fileID: 1412289697}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneBorder
+      value: 
+      objectReference: {fileID: 547827015}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_InventoryUI
       value: 
       objectReference: {fileID: 1352694655}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneDurability
+      value: 
+      objectReference: {fileID: 864821908}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_FirstSlotPosition
       value: 
@@ -12496,6 +12572,10 @@ MonoBehaviour:
   m_FirstSlotPosition: {fileID: 0}
   m_Player: {fileID: 1057887301}
   m_Durability: {fileID: 728016696}
+  m_Fill: {fileID: 0}
+  m_Border: {fileID: 0}
+  m_CloneFill: {fileID: 0}
+  m_CloneBorder: {fileID: 0}
   SlotIdx: 0
 --- !u!1001 &350730765
 PrefabInstance:
@@ -12605,13 +12685,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1057887301}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneFill
+      value: 
+      objectReference: {fileID: 654918836}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_CloneSlot
       value: 
       objectReference: {fileID: 1412289697}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneBorder
+      value: 
+      objectReference: {fileID: 547827015}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_InventoryUI
       value: 
       objectReference: {fileID: 1352694655}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneDurability
+      value: 
+      objectReference: {fileID: 864821908}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_FirstSlotPosition
       value: 
@@ -13756,13 +13848,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1057887301}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneFill
+      value: 
+      objectReference: {fileID: 654918836}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_CloneSlot
       value: 
       objectReference: {fileID: 1412289697}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneBorder
+      value: 
+      objectReference: {fileID: 547827015}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_InventoryUI
       value: 
       objectReference: {fileID: 1352694655}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneDurability
+      value: 
+      objectReference: {fileID: 864821908}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_FirstSlotPosition
       value: 
@@ -14218,6 +14322,82 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 541183069}
   m_CullTransparentMesh: 1
+--- !u!1 &547827013
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 547827014}
+  - component: {fileID: 547827016}
+  - component: {fileID: 547827015}
+  m_Layer: 5
+  m_Name: Border
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &547827014
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 547827013}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 864821909}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &547827015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 547827013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: ae0f0ac6fe69bbc428e99745c22b614a, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &547827016
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 547827013}
+  m_CullTransparentMesh: 1
 --- !u!1 &550352867
 GameObject:
   m_ObjectHideFlags: 0
@@ -14551,13 +14731,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1057887301}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneFill
+      value: 
+      objectReference: {fileID: 654918836}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_CloneSlot
       value: 
       objectReference: {fileID: 1412289697}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneBorder
+      value: 
+      objectReference: {fileID: 547827015}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_InventoryUI
       value: 
       objectReference: {fileID: 1352694655}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneDurability
+      value: 
+      objectReference: {fileID: 864821908}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_FirstSlotPosition
       value: 
@@ -14818,9 +15010,11 @@ MonoBehaviour:
   PausePanel: {fileID: 900349055}
   MenuPanel: {fileID: 1869409928}
   PlayScreen: {fileID: 779477118}
+  ObjectPools: {fileID: 0}
   m_Player: {fileID: 1057887301}
   m_InventoryUI: {fileID: 1352694655}
   m_AtrributeUI: {fileID: 137664084}
+  m_DayNightSystem: {fileID: 0}
 --- !u!4 &605013168 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3123279933905353903, guid: c7871c99e06a4e1498522dfb7e5dafa8, type: 3}
@@ -14949,6 +15143,10 @@ MonoBehaviour:
   m_FirstSlotPosition: {fileID: 0}
   m_Player: {fileID: 1057887301}
   m_Durability: {fileID: 389424630}
+  m_Fill: {fileID: 0}
+  m_Border: {fileID: 0}
+  m_CloneFill: {fileID: 0}
+  m_CloneBorder: {fileID: 0}
   SlotIdx: 0
 --- !u!1 &609583936
 GameObject:
@@ -15417,13 +15615,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1057887301}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneFill
+      value: 
+      objectReference: {fileID: 654918836}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_CloneSlot
       value: 
       objectReference: {fileID: 1412289697}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneBorder
+      value: 
+      objectReference: {fileID: 547827015}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_InventoryUI
       value: 
       objectReference: {fileID: 1352694655}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneDurability
+      value: 
+      objectReference: {fileID: 864821908}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_FirstSlotPosition
       value: 
@@ -15556,6 +15766,82 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 1
   m_TargetDisplay: 0
+--- !u!1 &654918834
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 654918835}
+  - component: {fileID: 654918837}
+  - component: {fileID: 654918836}
+  m_Layer: 5
+  m_Name: Fill
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &654918835
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 654918834}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 864821909}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &654918836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 654918834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.2794416, g: 1, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 0}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &654918837
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 654918834}
+  m_CullTransparentMesh: 1
 --- !u!1001 &659418184
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15660,13 +15946,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1057887301}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneFill
+      value: 
+      objectReference: {fileID: 654918836}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_CloneSlot
       value: 
       objectReference: {fileID: 1412289697}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneBorder
+      value: 
+      objectReference: {fileID: 547827015}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_InventoryUI
       value: 
       objectReference: {fileID: 1352694655}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneDurability
+      value: 
+      objectReference: {fileID: 864821908}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_FirstSlotPosition
       value: 
@@ -17498,6 +17796,96 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fa1306f80ec97a4ba329d3c6ea02640, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &864821908
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 864821909}
+  - component: {fileID: 864821910}
+  m_Layer: 5
+  m_Name: Durability
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &864821909
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 864821908}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 0.69999, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 654918835}
+  - {fileID: 547827014}
+  m_Father: {fileID: 1412289701}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 50.35266, y: -84.38086}
+  m_SizeDelta: {x: 100.4, y: 21.8165}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &864821910
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 864821908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 0
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 0
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 0}
+  m_FillRect: {fileID: 654918835}
+  m_HandleRect: {fileID: 0}
+  m_Direction: 0
+  m_MinValue: 0
+  m_MaxValue: 100
+  m_WholeNumbers: 0
+  m_Value: 100
+  m_OnValueChanged:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1001 &875399532
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17602,13 +17990,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1057887301}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneFill
+      value: 
+      objectReference: {fileID: 654918836}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_CloneSlot
       value: 
       objectReference: {fileID: 1412289697}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneBorder
+      value: 
+      objectReference: {fileID: 547827015}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_InventoryUI
       value: 
       objectReference: {fileID: 1352694655}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneDurability
+      value: 
+      objectReference: {fileID: 864821908}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_FirstSlotPosition
       value: 
@@ -17895,13 +18295,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1057887301}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneFill
+      value: 
+      objectReference: {fileID: 654918836}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_CloneSlot
       value: 
       objectReference: {fileID: 1412289697}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneBorder
+      value: 
+      objectReference: {fileID: 547827015}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_InventoryUI
       value: 
       objectReference: {fileID: 1352694655}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneDurability
+      value: 
+      objectReference: {fileID: 864821908}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_FirstSlotPosition
       value: 
@@ -18656,13 +19068,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1057887301}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneFill
+      value: 
+      objectReference: {fileID: 654918836}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_CloneSlot
       value: 
       objectReference: {fileID: 1412289697}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneBorder
+      value: 
+      objectReference: {fileID: 547827015}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_InventoryUI
       value: 
       objectReference: {fileID: 1352694655}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneDurability
+      value: 
+      objectReference: {fileID: 864821908}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_FirstSlotPosition
       value: 
@@ -19363,13 +19787,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1057887301}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneFill
+      value: 
+      objectReference: {fileID: 654918836}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_CloneSlot
       value: 
       objectReference: {fileID: 1412289697}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneBorder
+      value: 
+      objectReference: {fileID: 547827015}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_InventoryUI
       value: 
       objectReference: {fileID: 1352694655}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneDurability
+      value: 
+      objectReference: {fileID: 864821908}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_FirstSlotPosition
       value: 
@@ -20657,13 +21093,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1057887301}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneFill
+      value: 
+      objectReference: {fileID: 654918836}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_CloneSlot
       value: 
       objectReference: {fileID: 1412289697}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneBorder
+      value: 
+      objectReference: {fileID: 547827015}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_InventoryUI
       value: 
       objectReference: {fileID: 1352694655}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneDurability
+      value: 
+      objectReference: {fileID: 864821908}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_FirstSlotPosition
       value: 
@@ -21048,6 +21496,10 @@ MonoBehaviour:
   m_FirstSlotPosition: {fileID: 0}
   m_Player: {fileID: 1057887301}
   m_Durability: {fileID: 1862304639}
+  m_Fill: {fileID: 0}
+  m_Border: {fileID: 0}
+  m_CloneFill: {fileID: 0}
+  m_CloneBorder: {fileID: 0}
   SlotIdx: 0
 --- !u!114 &1121883842
 MonoBehaviour:
@@ -21706,6 +22158,10 @@ MonoBehaviour:
   m_FirstSlotPosition: {fileID: 0}
   m_Player: {fileID: 1057887301}
   m_Durability: {fileID: 550352869}
+  m_Fill: {fileID: 0}
+  m_Border: {fileID: 0}
+  m_CloneFill: {fileID: 0}
+  m_CloneBorder: {fileID: 0}
   SlotIdx: 0
 --- !u!1001 &1266909460
 PrefabInstance:
@@ -21811,13 +22267,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1057887301}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneFill
+      value: 
+      objectReference: {fileID: 654918836}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_CloneSlot
       value: 
       objectReference: {fileID: 1412289697}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneBorder
+      value: 
+      objectReference: {fileID: 547827015}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_InventoryUI
       value: 
       objectReference: {fileID: 1352694655}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneDurability
+      value: 
+      objectReference: {fileID: 864821908}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_FirstSlotPosition
       value: 
@@ -21952,13 +22420,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1057887301}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneFill
+      value: 
+      objectReference: {fileID: 654918836}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_CloneSlot
       value: 
       objectReference: {fileID: 1412289697}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneBorder
+      value: 
+      objectReference: {fileID: 547827015}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_InventoryUI
       value: 
       objectReference: {fileID: 1352694655}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneDurability
+      value: 
+      objectReference: {fileID: 864821908}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_FirstSlotPosition
       value: 
@@ -23170,7 +23650,8 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 864821909}
   m_Father: {fileID: 2039587748}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -25154,6 +25635,10 @@ MonoBehaviour:
   m_FirstSlotPosition: {fileID: 0}
   m_Player: {fileID: 1057887301}
   m_Durability: {fileID: 1527757856}
+  m_Fill: {fileID: 0}
+  m_Border: {fileID: 0}
+  m_CloneFill: {fileID: 0}
+  m_CloneBorder: {fileID: 0}
   SlotIdx: 0
 --- !u!1 &1603662822
 GameObject:
@@ -25553,13 +26038,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1057887301}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneFill
+      value: 
+      objectReference: {fileID: 654918836}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_CloneSlot
       value: 
       objectReference: {fileID: 1412289697}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneBorder
+      value: 
+      objectReference: {fileID: 547827015}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_InventoryUI
       value: 
       objectReference: {fileID: 1352694655}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneDurability
+      value: 
+      objectReference: {fileID: 864821908}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_FirstSlotPosition
       value: 
@@ -26155,13 +26652,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1057887301}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneFill
+      value: 
+      objectReference: {fileID: 654918836}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_CloneSlot
       value: 
       objectReference: {fileID: 1412289697}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneBorder
+      value: 
+      objectReference: {fileID: 547827015}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_InventoryUI
       value: 
       objectReference: {fileID: 1352694655}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneDurability
+      value: 
+      objectReference: {fileID: 864821908}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_FirstSlotPosition
       value: 
@@ -26615,13 +27124,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1057887301}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneFill
+      value: 
+      objectReference: {fileID: 654918836}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_CloneSlot
       value: 
       objectReference: {fileID: 1412289697}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneBorder
+      value: 
+      objectReference: {fileID: 547827015}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_InventoryUI
       value: 
       objectReference: {fileID: 1352694655}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneDurability
+      value: 
+      objectReference: {fileID: 864821908}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_FirstSlotPosition
       value: 
@@ -27089,13 +27610,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1057887301}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneFill
+      value: 
+      objectReference: {fileID: 654918836}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_CloneSlot
       value: 
       objectReference: {fileID: 1412289697}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneBorder
+      value: 
+      objectReference: {fileID: 547827015}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_InventoryUI
       value: 
       objectReference: {fileID: 1352694655}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneDurability
+      value: 
+      objectReference: {fileID: 864821908}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_FirstSlotPosition
       value: 
@@ -27230,13 +27763,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1057887301}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneFill
+      value: 
+      objectReference: {fileID: 654918836}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_CloneSlot
       value: 
       objectReference: {fileID: 1412289697}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneBorder
+      value: 
+      objectReference: {fileID: 547827015}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_InventoryUI
       value: 
       objectReference: {fileID: 1352694655}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneDurability
+      value: 
+      objectReference: {fileID: 864821908}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_FirstSlotPosition
       value: 
@@ -28459,13 +29004,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1057887301}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneFill
+      value: 
+      objectReference: {fileID: 654918836}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_CloneSlot
       value: 
       objectReference: {fileID: 1412289697}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneBorder
+      value: 
+      objectReference: {fileID: 547827015}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_InventoryUI
       value: 
       objectReference: {fileID: 1352694655}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneDurability
+      value: 
+      objectReference: {fileID: 864821908}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_FirstSlotPosition
       value: 
@@ -28925,6 +29482,10 @@ MonoBehaviour:
   m_FirstSlotPosition: {fileID: 0}
   m_Player: {fileID: 1057887301}
   m_Durability: {fileID: 1645136400}
+  m_Fill: {fileID: 0}
+  m_Border: {fileID: 0}
+  m_CloneFill: {fileID: 0}
+  m_CloneBorder: {fileID: 0}
   SlotIdx: 0
 --- !u!1 &1935801680
 GameObject:
@@ -29222,13 +29783,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1057887301}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneFill
+      value: 
+      objectReference: {fileID: 654918836}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_CloneSlot
       value: 
       objectReference: {fileID: 1412289697}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneBorder
+      value: 
+      objectReference: {fileID: 547827015}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_InventoryUI
       value: 
       objectReference: {fileID: 1352694655}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneDurability
+      value: 
+      objectReference: {fileID: 864821908}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_FirstSlotPosition
       value: 
@@ -29710,13 +30283,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1057887301}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneFill
+      value: 
+      objectReference: {fileID: 654918836}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_CloneSlot
       value: 
       objectReference: {fileID: 1412289697}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneBorder
+      value: 
+      objectReference: {fileID: 547827015}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_InventoryUI
       value: 
       objectReference: {fileID: 1352694655}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneDurability
+      value: 
+      objectReference: {fileID: 864821908}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_FirstSlotPosition
       value: 
@@ -30431,13 +31016,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1057887301}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneFill
+      value: 
+      objectReference: {fileID: 654918836}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_CloneSlot
       value: 
       objectReference: {fileID: 1412289697}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneBorder
+      value: 
+      objectReference: {fileID: 547827015}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_InventoryUI
       value: 
       objectReference: {fileID: 1352694655}
+    - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
+      propertyPath: m_CloneDurability
+      value: 
+      objectReference: {fileID: 864821908}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_FirstSlotPosition
       value: 
@@ -30688,6 +31285,10 @@ MonoBehaviour:
   m_FirstSlotPosition: {fileID: 0}
   m_Player: {fileID: 1057887301}
   m_Durability: {fileID: 728157342}
+  m_Fill: {fileID: 0}
+  m_Border: {fileID: 0}
+  m_CloneFill: {fileID: 0}
+  m_CloneBorder: {fileID: 0}
   SlotIdx: 0
 --- !u!1 &2101411473
 GameObject:
@@ -30947,6 +31548,10 @@ MonoBehaviour:
   m_FirstSlotPosition: {fileID: 0}
   m_Player: {fileID: 1057887301}
   m_Durability: {fileID: 1774147835}
+  m_Fill: {fileID: 0}
+  m_Border: {fileID: 0}
+  m_CloneFill: {fileID: 0}
+  m_CloneBorder: {fileID: 0}
   SlotIdx: 0
 --- !u!1 &2110349126
 GameObject:

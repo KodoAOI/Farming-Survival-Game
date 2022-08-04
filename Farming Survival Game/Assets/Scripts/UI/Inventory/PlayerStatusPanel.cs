@@ -10,10 +10,9 @@ public class PlayerStatusPanel : MonoBehaviour
     [SerializeField] private TextMeshProUGUI m_FoodText;
     [SerializeField] private TextMeshProUGUI m_StaminaText;
     // Start is called before the first frame update
-    float CurrTime;
     void Start()
     {
-        CurrTime = 3.5f;
+        
     }
 
     // Update is called once per frame

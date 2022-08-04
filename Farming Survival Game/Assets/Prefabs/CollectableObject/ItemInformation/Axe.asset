@@ -21,3 +21,4 @@ MonoBehaviour:
   Stack: 1
   Action: 1
   Icon: {fileID: 21300000, guid: 065f16dea8c460448bbbcd77e4fb28a4, type: 3}
+  IsTool: 1

@@ -16,3 +16,9 @@ MonoBehaviour:
   ItemFood: 10
   ItemStamina: 10
   ToolDurability: -1
+  StartDurability: 0
+  Type: 0
+  Stack: 0
+  Action: 0
+  Icon: {fileID: 0}
+  IsTool: 0

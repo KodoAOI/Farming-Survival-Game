@@ -84,7 +84,8 @@ public class CollectableObjectController : MonoBehaviour
 
     void Update()
     {
-       
+        if(IsTool && CurrDurability <= 0)
+            SelfDestroy();
     }
 
     public Collider2D GetCollideWith;

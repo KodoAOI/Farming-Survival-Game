@@ -68,7 +68,8 @@ public class GameManager : MonoBehaviour
             ObjectPools.SetActive(State == GameState.Play || State == GameState.Pause);
             m_AtrributeUI.gameObject.SetActive(State == GameState.Play);
             m_InventoryUI.gameObject.SetActive(false);
-            if(State == GameState.Menu)m_DayNightSystem.SetActive(false);
+            if(State == GameState.Play || State == GameState.Pause) m_DayNightSystem.SetActive(true);
+            else m_DayNightSystem.SetActive(false);
             m_Player.Active = true;
         }
     }

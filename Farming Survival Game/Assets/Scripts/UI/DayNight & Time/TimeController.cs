@@ -8,42 +8,50 @@ public class TimeController : MonoBehaviour
 {
     [SerializeField]private Volume ppv;
     [SerializeField]private float TotalSecondInDay;
-    [SerializeField] private float StartTime;
+    [SerializeField] private float StartHourOfFirstDay;
     private float TotalSecondInNight;
     private float TotalSecondADay;
     private int Day;
     private float CurrTime;
     private TimeInDay m_TimeInDay;
+    private int hour, minute;
+    private float tmpHour;
     private void Start() {
         TotalSecondInNight = TotalSecondInDay / 2;
         TotalSecondADay = TotalSecondInDay + TotalSecondInNight;
-        CurrTime = StartTime;
+        CurrTime = ToSystemTime(StartHourOfFirstDay);
+        Day = 1;
     }
+    // ban ngay tu 4 gio den 20 gio
+    // ban den tu 20 gio den 4 gio
     private void Update() {
         CurrTime += Time.deltaTime;
-        if(CurrTime > TotalSecondADay)CurrTime -= TotalSecondADay;
-        
-        if(CurrTime <= TotalSecondInNight / 2)
+        if(CurrTime > TotalSecondADay)
+        {
+            CurrTime -= TotalSecondADay;
+            Day++;
+        }
+        if(GetTime() >= 4.0f && GetTime() <= 7.0f)
         {
             // print("Dawn");
-            SetUpLight(TotalSecondInNight/2 - CurrTime, TotalSecondInNight/2);
+            SetUpLight(7.0f - GetTime(), 3.0f);
             m_TimeInDay = TimeInDay.Morning;
         }
-        else if(CurrTime >= TotalSecondInDay && CurrTime <= TotalSecondInDay + TotalSecondInNight / 2)
+        else if(GetTime() >= 18.0f && GetTime() <= 21.0f)
         {
             // print("Night");
-            SetUpLight(CurrTime - TotalSecondInDay, TotalSecondInNight/2);
+            SetUpLight(GetTime() - 18.0f, 3.0f);
             m_TimeInDay = TimeInDay.Night;
         }
-        else if(CurrTime <= TotalSecondADay && CurrTime >= TotalSecondInDay)
+        else if(GetTime() < 18.0f && GetTime() > 7.0f)
         {
-            // print("MidNight");
-            SetUpLight(1, 1);
+            // print("Noon");
+            SetUpLight(0.0f, 1.0f);
         }
         else 
         {
-            // print("Noon");
-            SetUpLight(0, 1);
+            // print("MidNight");
+            SetUpLight(1.0f, 1.0f);
         }
         // print(CurrTime);
     }
@@ -52,6 +60,36 @@ public class TimeController : MonoBehaviour
     {
         float Weight = Mathf.Min(Time/TotalTime, 1f);
         ppv.weight = Weight;
+    }
+
+    public int GetHour()
+    {
+        tmpHour = (CurrTime * 24.0f / TotalSecondADay);
+        hour = (int)tmpHour;
+        return hour;
+    }
+
+    public float GetTime()
+    {
+        return tmpHour;
+    }
+
+    public int GetMinute()
+    {
+        minute = (int)((tmpHour % 1) * 60f);
+        minute = (int)(minute/10);
+        minute *= 10;
+        return minute;
+    }
+
+    public int GetDay()
+    {
+        return Day;
+    }
+
+    public float ToSystemTime(float time)
+    {
+        return time * TotalSecondADay / 24.0f;
     }
 }
 

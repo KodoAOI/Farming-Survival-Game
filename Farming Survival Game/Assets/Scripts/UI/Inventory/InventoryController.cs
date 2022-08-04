@@ -102,7 +102,7 @@ public class InventoryController : MonoBehaviour
         }
     }
 
-    public void Add(CollectableObjectController Object)
+    public bool Add(CollectableObjectController Object)
     {
         bool Flag = false;
         foreach(Slot slot in Slots)
@@ -113,7 +113,9 @@ public class InventoryController : MonoBehaviour
                 {
                     slot.Count ++;
                     Flag = true;
-                    break;
+                    m_InventoryUI.Setup(false);
+                    return true;
+                    // break;
                 }
             }
         }
@@ -124,11 +126,14 @@ public class InventoryController : MonoBehaviour
                 if(slot.Type == CollectableType.NONE)
                 {
                     slot.Add(Object);
-                    break;
+                    m_InventoryUI.Setup(false);
+                    return true;
+                    // break;
                 }
             }
         }
-        m_InventoryUI.Setup(false);
+        // m_InventoryUI.Setup(false);
+        return false;
     }
 
     public void Remove(int idx)

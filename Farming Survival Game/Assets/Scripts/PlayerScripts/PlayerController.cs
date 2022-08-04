@@ -177,8 +177,7 @@ public class PlayerController : MonoBehaviour
         
         if(m_object != null && m_object.tag == "CollectableObject" && m_object.GetCollideWith == gameObject.GetComponent<Collider2D>() && m_object.CollectableOrNot)
         {
-            m_Inventory.Add(m_object);
-            m_object.SelfDestroy();
+            if(m_Inventory.Add(m_object))   m_object.SelfDestroy();
         }
     }
 

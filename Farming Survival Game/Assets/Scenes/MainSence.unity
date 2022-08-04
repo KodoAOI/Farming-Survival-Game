@@ -868,7 +868,7 @@ PrefabInstance:
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_CloneDurability
       value: 
-      objectReference: {fileID: 864821908}
+      objectReference: {fileID: 864821910}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_FirstSlotPosition
       value: 
@@ -1795,7 +1795,7 @@ PrefabInstance:
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_CloneDurability
       value: 
-      objectReference: {fileID: 864821908}
+      objectReference: {fileID: 864821910}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_FirstSlotPosition
       value: 
@@ -11074,7 +11074,7 @@ PrefabInstance:
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_CloneDurability
       value: 
-      objectReference: {fileID: 864821908}
+      objectReference: {fileID: 864821910}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_FirstSlotPosition
       value: 
@@ -11308,7 +11308,7 @@ PrefabInstance:
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_CloneDurability
       value: 
-      objectReference: {fileID: 864821908}
+      objectReference: {fileID: 864821910}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_FirstSlotPosition
       value: 
@@ -12028,7 +12028,7 @@ PrefabInstance:
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_CloneDurability
       value: 
-      objectReference: {fileID: 864821908}
+      objectReference: {fileID: 864821910}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_FirstSlotPosition
       value: 
@@ -12182,10 +12182,7 @@ MonoBehaviour:
   m_FirstSlotPosition: {fileID: 0}
   m_Player: {fileID: 1057887301}
   m_Durability: {fileID: 1969072433}
-  m_Fill: {fileID: 0}
-  m_Border: {fileID: 0}
-  m_CloneFill: {fileID: 0}
-  m_CloneBorder: {fileID: 0}
+  m_CloneDurability: {fileID: 0}
   SlotIdx: 0
 --- !u!224 &318985565 stripped
 RectTransform:
@@ -12418,7 +12415,7 @@ PrefabInstance:
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_CloneDurability
       value: 
-      objectReference: {fileID: 864821908}
+      objectReference: {fileID: 864821910}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_FirstSlotPosition
       value: 
@@ -12572,10 +12569,7 @@ MonoBehaviour:
   m_FirstSlotPosition: {fileID: 0}
   m_Player: {fileID: 1057887301}
   m_Durability: {fileID: 728016696}
-  m_Fill: {fileID: 0}
-  m_Border: {fileID: 0}
-  m_CloneFill: {fileID: 0}
-  m_CloneBorder: {fileID: 0}
+  m_CloneDurability: {fileID: 0}
   SlotIdx: 0
 --- !u!1001 &350730765
 PrefabInstance:
@@ -12703,7 +12697,7 @@ PrefabInstance:
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_CloneDurability
       value: 
-      objectReference: {fileID: 864821908}
+      objectReference: {fileID: 864821910}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_FirstSlotPosition
       value: 
@@ -13866,7 +13860,7 @@ PrefabInstance:
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_CloneDurability
       value: 
-      objectReference: {fileID: 864821908}
+      objectReference: {fileID: 864821910}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_FirstSlotPosition
       value: 
@@ -14749,7 +14743,7 @@ PrefabInstance:
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_CloneDurability
       value: 
-      objectReference: {fileID: 864821908}
+      objectReference: {fileID: 864821910}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_FirstSlotPosition
       value: 
@@ -15143,10 +15137,7 @@ MonoBehaviour:
   m_FirstSlotPosition: {fileID: 0}
   m_Player: {fileID: 1057887301}
   m_Durability: {fileID: 389424630}
-  m_Fill: {fileID: 0}
-  m_Border: {fileID: 0}
-  m_CloneFill: {fileID: 0}
-  m_CloneBorder: {fileID: 0}
+  m_CloneDurability: {fileID: 0}
   SlotIdx: 0
 --- !u!1 &609583936
 GameObject:
@@ -15633,7 +15624,7 @@ PrefabInstance:
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_CloneDurability
       value: 
-      objectReference: {fileID: 864821908}
+      objectReference: {fileID: 864821910}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_FirstSlotPosition
       value: 
@@ -15964,7 +15955,7 @@ PrefabInstance:
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_CloneDurability
       value: 
-      objectReference: {fileID: 864821908}
+      objectReference: {fileID: 864821910}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_FirstSlotPosition
       value: 
@@ -18008,7 +17999,7 @@ PrefabInstance:
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_CloneDurability
       value: 
-      objectReference: {fileID: 864821908}
+      objectReference: {fileID: 864821910}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_FirstSlotPosition
       value: 
@@ -18313,7 +18304,7 @@ PrefabInstance:
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_CloneDurability
       value: 
-      objectReference: {fileID: 864821908}
+      objectReference: {fileID: 864821910}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_FirstSlotPosition
       value: 
@@ -19086,7 +19077,7 @@ PrefabInstance:
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_CloneDurability
       value: 
-      objectReference: {fileID: 864821908}
+      objectReference: {fileID: 864821910}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_FirstSlotPosition
       value: 
@@ -19805,7 +19796,7 @@ PrefabInstance:
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_CloneDurability
       value: 
-      objectReference: {fileID: 864821908}
+      objectReference: {fileID: 864821910}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_FirstSlotPosition
       value: 
@@ -21111,7 +21102,7 @@ PrefabInstance:
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_CloneDurability
       value: 
-      objectReference: {fileID: 864821908}
+      objectReference: {fileID: 864821910}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_FirstSlotPosition
       value: 
@@ -21496,10 +21487,7 @@ MonoBehaviour:
   m_FirstSlotPosition: {fileID: 0}
   m_Player: {fileID: 1057887301}
   m_Durability: {fileID: 1862304639}
-  m_Fill: {fileID: 0}
-  m_Border: {fileID: 0}
-  m_CloneFill: {fileID: 0}
-  m_CloneBorder: {fileID: 0}
+  m_CloneDurability: {fileID: 0}
   SlotIdx: 0
 --- !u!114 &1121883842
 MonoBehaviour:
@@ -22158,10 +22146,7 @@ MonoBehaviour:
   m_FirstSlotPosition: {fileID: 0}
   m_Player: {fileID: 1057887301}
   m_Durability: {fileID: 550352869}
-  m_Fill: {fileID: 0}
-  m_Border: {fileID: 0}
-  m_CloneFill: {fileID: 0}
-  m_CloneBorder: {fileID: 0}
+  m_CloneDurability: {fileID: 0}
   SlotIdx: 0
 --- !u!1001 &1266909460
 PrefabInstance:
@@ -22285,7 +22270,7 @@ PrefabInstance:
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_CloneDurability
       value: 
-      objectReference: {fileID: 864821908}
+      objectReference: {fileID: 864821910}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_FirstSlotPosition
       value: 
@@ -22438,7 +22423,7 @@ PrefabInstance:
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_CloneDurability
       value: 
-      objectReference: {fileID: 864821908}
+      objectReference: {fileID: 864821910}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_FirstSlotPosition
       value: 
@@ -25635,10 +25620,7 @@ MonoBehaviour:
   m_FirstSlotPosition: {fileID: 0}
   m_Player: {fileID: 1057887301}
   m_Durability: {fileID: 1527757856}
-  m_Fill: {fileID: 0}
-  m_Border: {fileID: 0}
-  m_CloneFill: {fileID: 0}
-  m_CloneBorder: {fileID: 0}
+  m_CloneDurability: {fileID: 0}
   SlotIdx: 0
 --- !u!1 &1603662822
 GameObject:
@@ -26056,7 +26038,7 @@ PrefabInstance:
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_CloneDurability
       value: 
-      objectReference: {fileID: 864821908}
+      objectReference: {fileID: 864821910}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_FirstSlotPosition
       value: 
@@ -26670,7 +26652,7 @@ PrefabInstance:
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_CloneDurability
       value: 
-      objectReference: {fileID: 864821908}
+      objectReference: {fileID: 864821910}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_FirstSlotPosition
       value: 
@@ -27142,7 +27124,7 @@ PrefabInstance:
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_CloneDurability
       value: 
-      objectReference: {fileID: 864821908}
+      objectReference: {fileID: 864821910}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_FirstSlotPosition
       value: 
@@ -27628,7 +27610,7 @@ PrefabInstance:
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_CloneDurability
       value: 
-      objectReference: {fileID: 864821908}
+      objectReference: {fileID: 864821910}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_FirstSlotPosition
       value: 
@@ -27781,7 +27763,7 @@ PrefabInstance:
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_CloneDurability
       value: 
-      objectReference: {fileID: 864821908}
+      objectReference: {fileID: 864821910}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_FirstSlotPosition
       value: 
@@ -29022,7 +29004,7 @@ PrefabInstance:
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_CloneDurability
       value: 
-      objectReference: {fileID: 864821908}
+      objectReference: {fileID: 864821910}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_FirstSlotPosition
       value: 
@@ -29482,10 +29464,7 @@ MonoBehaviour:
   m_FirstSlotPosition: {fileID: 0}
   m_Player: {fileID: 1057887301}
   m_Durability: {fileID: 1645136400}
-  m_Fill: {fileID: 0}
-  m_Border: {fileID: 0}
-  m_CloneFill: {fileID: 0}
-  m_CloneBorder: {fileID: 0}
+  m_CloneDurability: {fileID: 0}
   SlotIdx: 0
 --- !u!1 &1935801680
 GameObject:
@@ -29801,7 +29780,7 @@ PrefabInstance:
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_CloneDurability
       value: 
-      objectReference: {fileID: 864821908}
+      objectReference: {fileID: 864821910}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_FirstSlotPosition
       value: 
@@ -30301,7 +30280,7 @@ PrefabInstance:
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_CloneDurability
       value: 
-      objectReference: {fileID: 864821908}
+      objectReference: {fileID: 864821910}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_FirstSlotPosition
       value: 
@@ -31034,7 +31013,7 @@ PrefabInstance:
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_CloneDurability
       value: 
-      objectReference: {fileID: 864821908}
+      objectReference: {fileID: 864821910}
     - target: {fileID: 4970975412620794028, guid: fbf331ee3092c3f41b4425995fc5a5ed, type: 3}
       propertyPath: m_FirstSlotPosition
       value: 
@@ -31285,10 +31264,7 @@ MonoBehaviour:
   m_FirstSlotPosition: {fileID: 0}
   m_Player: {fileID: 1057887301}
   m_Durability: {fileID: 728157342}
-  m_Fill: {fileID: 0}
-  m_Border: {fileID: 0}
-  m_CloneFill: {fileID: 0}
-  m_CloneBorder: {fileID: 0}
+  m_CloneDurability: {fileID: 0}
   SlotIdx: 0
 --- !u!1 &2101411473
 GameObject:
@@ -31548,10 +31524,7 @@ MonoBehaviour:
   m_FirstSlotPosition: {fileID: 0}
   m_Player: {fileID: 1057887301}
   m_Durability: {fileID: 1774147835}
-  m_Fill: {fileID: 0}
-  m_Border: {fileID: 0}
-  m_CloneFill: {fileID: 0}
-  m_CloneBorder: {fileID: 0}
+  m_CloneDurability: {fileID: 0}
   SlotIdx: 0
 --- !u!1 &2110349126
 GameObject:

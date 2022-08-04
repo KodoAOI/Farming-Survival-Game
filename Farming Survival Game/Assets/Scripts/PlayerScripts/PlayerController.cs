@@ -174,7 +174,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other) {
         CollectableObjectController m_object = other.GetComponent<CollectableObjectController>();
-
+        
         if(m_object != null && m_object.tag == "CollectableObject" && m_object.GetCollideWith == gameObject.GetComponent<Collider2D>() && m_object.CollectableOrNot)
         {
             m_Inventory.Add(m_object);

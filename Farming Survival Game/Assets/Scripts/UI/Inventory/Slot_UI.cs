@@ -50,7 +50,15 @@ public class Slot_UI : MonoBehaviour, IDropHandler
         else
         {
             m_Durability.gameObject.SetActive(true);
-            m_Durability.value = (float)m_Slot.m_Durability / (float)m_Slot.m_MaxDurability * 100f;
+            try{
+                m_Durability.value = (float)m_Slot.m_Durability / (float)m_Slot.m_MaxDurability * 100f;
+            }
+            catch
+            {
+                print(m_Durability);
+                print(m_Slot);
+            }
+            
         }
     }
     public void SetItem(InventoryController.Slot slot)

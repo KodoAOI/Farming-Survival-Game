@@ -78,6 +78,7 @@ MonoBehaviour:
   - {fileID: 893157413751378989, guid: 7e6385fbfe8ffe44b8d591efec3d99f2, type: 3}
   - {fileID: 893157413751378989, guid: 7e6385fbfe8ffe44b8d591efec3d99f2, type: 3}
   m_Action: 1
+  m_TileController: {fileID: 8985588276066361285, guid: e8d09b6ac792bd043a66a6e9383e8448, type: 3}
 --- !u!1 &2769525218662647022
 GameObject:
   m_ObjectHideFlags: 0

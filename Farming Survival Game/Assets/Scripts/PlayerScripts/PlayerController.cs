@@ -77,7 +77,7 @@ public class PlayerController : MonoBehaviour
         //trigger action
         if(Input.anyKeyDown)
         {
-            if(Input.GetKeyDown(KeyCode.Space))
+            if(Input.GetKeyDown(KeyCode.E))
             {
                 CanAction = true;
                 try

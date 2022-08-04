@@ -36,6 +36,7 @@ public class TileController : MonoBehaviour
 
    public bool CanCrop(PlayerController m_Player, Vector3 Position)
    {
+      print(OnMapObjectsList.Count);
       Vector3Int PlayerLocation = m_TileMap.WorldToCell(m_Player.transform.position);
       Vector3Int NewLocation = m_TileMap.WorldToCell(Position);
       return (PlayerLocation - NewLocation).magnitude <= m_MaxLengthPlace && m_UnWateredCropTileMap.GetTile(NewLocation) == null && OnMapObjectsList.Contains(NewLocation) == false;

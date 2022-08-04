@@ -15,11 +15,14 @@ public class Slot_UI : MonoBehaviour, IDropHandler
     [SerializeField] private Inventory_UI m_InventoryUI;
     [SerializeField] private Color m_Color;
     [SerializeField] private Image m_CloneSlot;
-    [SerializeField] private GameObject m_CloneDurability;
     [SerializeField] private ObjectInformationPanel m_ObjectInformationPanel;
     [SerializeField] private Transform m_FirstSlotPosition;
     [SerializeField] private PlayerController m_Player;
     [SerializeField] private Slider m_Durability;
+    [SerializeField] private Image m_Fill;
+    [SerializeField] private Image m_Border;
+    [SerializeField] private Image m_CloneFill;
+    [SerializeField] private Image m_CloneBorder;
     private InventoryController.Slot m_Slot;
 
     public int SlotIdx;
@@ -122,7 +125,15 @@ public class Slot_UI : MonoBehaviour, IDropHandler
             obj.SetPosition(m_ObjectInformationPanel.m_SlotIdx);
             m_CloneSlot.sprite = m_ItemIcon.sprite;
             m_CloneSlot.color = m_ItemIcon.color;
-            m_CloneDurability = m_Durability.gameObject;
+            m_CloneBorder.gameObject.SetActive(true);
+            m_CloneFill.gameObject.SetActive(true);
+            m_CloneBorder.sprite = m_Border.sprite;
+            m_CloneFill.sprite = m_Fill.sprite;
+            if(m_CurrDurability <= 0)   
+            {
+                m_CloneBorder.gameObject.SetActive(false);
+                m_CloneFill.gameObject.SetActive(false);
+            }
         }
     }
 

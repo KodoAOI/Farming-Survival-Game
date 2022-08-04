@@ -13,6 +13,7 @@ public class TileController : MonoBehaviour
    public Tilemap m_WateredCropTileMap;
    [SerializeField] private float m_MaxLengthPlace;
    Vector3Int Location = Vector3Int.zero;
+   private List<Vector3Int> OnMapObjectsList = new List<Vector3Int>();
 
    private void Start() {
       // m_UnWateredCropTile.gameObject.transform.localScale = new Vector3(0.15f, 0.15f, 0);
@@ -37,7 +38,7 @@ public class TileController : MonoBehaviour
    {
       Vector3Int PlayerLocation = m_TileMap.WorldToCell(m_Player.transform.position);
       Vector3Int NewLocation = m_TileMap.WorldToCell(Position);
-      return (PlayerLocation - NewLocation).magnitude <= m_MaxLengthPlace && m_UnWateredCropTileMap.GetTile(NewLocation) == null;
+      return (PlayerLocation - NewLocation).magnitude <= m_MaxLengthPlace && m_UnWateredCropTileMap.GetTile(NewLocation) == null && OnMapObjectsList.Contains(NewLocation) == false;
    }
 
    public bool CanWater(PlayerController m_Player,Vector3 Position)
@@ -52,5 +53,11 @@ public class TileController : MonoBehaviour
       print("WaterCrop");
       Vector3Int NewLocation = m_TileMap.WorldToCell(Position);
       m_WateredCropTileMap.SetTile(NewLocation, m_WateredCropTile);
+   }
+   public Vector3Int GetTile(Vector3 Position, bool IsObjectOnMap)
+   {
+      Vector3Int NewLocation = m_TileMap.WorldToCell(Position);
+      if(IsObjectOnMap)OnMapObjectsList.Add(NewLocation);
+      return m_TileMap.WorldToCell(Position);
    }
 }

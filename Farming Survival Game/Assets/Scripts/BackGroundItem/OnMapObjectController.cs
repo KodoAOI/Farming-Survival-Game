@@ -6,10 +6,13 @@ public class OnMapObjectController : MonoBehaviour
 {
     public CollectableObjectController[] ItemsDropper;
     [SerializeField]private Action m_Action;
+    private TileController m_TileController;
+    private Vector3Int CurrTile;
     // Start is called before the first frame update
     void Start()
     {
-        
+        m_TileController = FindObjectOfType<TileController>();
+        CurrTile = m_TileController.GetTile(transform.position, true);
     }
 
     // Update is called once per frame
@@ -32,15 +35,15 @@ public class OnMapObjectController : MonoBehaviour
             item.ResetAttribute(true);
             Vector3 SpawnOffset = UnityEngine.Random.insideUnitCircle * 0.1f;
             m_Player.DropAllFromObject(item, SpawnPoint + SpawnOffset, gameObject);
-            
-            // Vector3 spawnLocation = transform.position;
-            // Vector3 spawnOffset = UnityEngine.Random.insideUnitCircle * 1.25f;
-            // CollectableObjectController droppedItem = item.GetPool().Spawn(spawnLocation + spawnOffset, FindObjectOfType<CollectableObjectsPool>().transform);//Instantiate(item, spawnLocation + spawnOffset, Quaternion.identity);
-            // droppedItem.rb2d.AddForce(spawnOffset * .2f, ForceMode2D.Impulse);
         }
     }
     public Action GetAction()
     {
         return m_Action;
+    }
+
+    public Vector3Int GetTile()
+    {
+        return CurrTile;
     }
 }

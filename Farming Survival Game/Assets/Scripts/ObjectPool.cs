@@ -13,27 +13,36 @@ public class CollectableObjectPool
     {
         m_PoolType = Type;
     }
-    public CollectableObjectController Spawn(Vector2 Position, Transform Parent)
+    public CollectableObjectController Spawn(Vector2 Position, Transform Parent, CollectableObjectController item)
     {
-        if(m_InactiveObject.Count <= 0)
+        CollectableObjectController m_NewObj;
+        if(item.IsTool)
         {
-           CollectableObjectController m_NewObj = GameObject.Instantiate(m_Object);
+            m_NewObj = GameObject.Instantiate(m_Object);
+            m_NewObj.ResetAttribute();
+            m_NewObj.transform.SetParent(Parent);
+        }
+        else if(m_InactiveObject.Count <= 0)
+        {
+           m_NewObj = GameObject.Instantiate(m_Object);
            m_NewObj.transform.position = Position;
            m_NewObj.transform.SetParent(Parent);
            m_NewObj.gameObject.SetActive(true);
+           m_NewObj.ResetAttribute();
            m_ActiveObject.Add(m_NewObj);
-           return m_NewObj;
         }
         else
         {
-           CollectableObjectController m_NewObj = m_InactiveObject[0];
+           m_NewObj = m_InactiveObject[0];
            m_NewObj.transform.position = Position;
            m_NewObj.transform.SetParent(Parent);
            m_NewObj.gameObject.SetActive(true);
+           m_NewObj.ResetAttribute();
            m_ActiveObject.Add(m_NewObj);
            m_InactiveObject.RemoveAt(0);
-           return m_NewObj;
+           
         }
+        return m_NewObj;
     }
 
     public void Release(CollectableObjectController m_Obj)

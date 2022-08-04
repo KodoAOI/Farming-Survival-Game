@@ -10,6 +10,7 @@ public class PlayerActionController : MonoBehaviour
     [SerializeField] private Tilemap m_Tilemap;
     private List<OnMapObjectController> ObjectOnQueue = new List<OnMapObjectController>();
     [SerializeField]private TileController m_TileController;
+    [SerializeField] private ToolBarController m_ToolBar;
     private TileBase CurrTile;
     private Vector3 CropPosition;
     private Vector3 MousePosition;
@@ -85,6 +86,9 @@ public class PlayerActionController : MonoBehaviour
             case Action.Water : m_TileController.SetWateredTile(CropPosition); break;
             default : print("Quen Setup Kia!!!"); break;            
         }
+        m_Player.GetInventoryController().Slots[m_ToolBar.GetActiveSlot()].m_Durability --;
+        m_ToolBar.Setup();
+        // Debug.Break();
     }
 
     public void SetCropPosition(Vector3 Position)

@@ -40,7 +40,10 @@ public class PlayerController : MonoBehaviour
         m_InputAction.Disable();
     }
 
-
+    public InventoryController GetInventoryController()
+    {
+        return m_Inventory;
+    }
     
     void Start()
     {
@@ -62,9 +65,15 @@ public class PlayerController : MonoBehaviour
     {
         return CurrItemOnHand;
     }
+    public void SetCurrItem(InventoryController.Slot item)
+    {
+        CurrItemOnHand = item;
+    }
     void Update()
     {
         if(!Active)return;
+        //Check Current item on hand 
+        if(CurrItemOnHand != null && CurrItemOnHand.Count == 0)CurrItemOnHand = null;
         //trigger action
         if(Input.anyKeyDown)
         {
@@ -105,11 +114,13 @@ public class PlayerController : MonoBehaviour
                 catch{}
             }
         }
+        
         if(m_Action == Action.None || TempItemOnHand != CurrItemOnHand)
         {
             m_AttributeUIController.TurnOffProgressBar();
             TempItemOnHand = null;
         }
+        
         //Update Attribute Information
         m_AttributeController.CurrHealth = CurrHealth;
         m_AttributeController.CurrFood = CurrFood;
@@ -166,7 +177,6 @@ public class PlayerController : MonoBehaviour
 
         if(m_object != null && m_object.tag == "CollectableObject" && m_object.GetCollideWith == gameObject.GetComponent<Collider2D>() && m_object.CollectableOrNot)
         {
-            
             m_Inventory.Add(m_object);
             m_object.SelfDestroy();
         }
@@ -207,7 +217,7 @@ public class PlayerController : MonoBehaviour
 
         Vector3 spawnPoint = RandomPointInAnnulus(spawnLocation, 0.25f, 0.5f);
 
-        CollectableObjectController droppedItem = m_CollectableObjectsPool.m_Pool[item.GetCollectableType()].Spawn(spawnPoint,null);//Instantiate(item, spawnLocation + spawnOffset, Quaternion.identity);
+        CollectableObjectController droppedItem = m_CollectableObjectsPool.m_Pool[item.GetCollectableType()].Spawn(spawnPoint,null, item);//Instantiate(item, spawnLocation + spawnOffset, Quaternion.identity);
         droppedItem.rb2d.AddForce((spawnPoint - spawnLocation) * 3f, ForceMode2D.Impulse);
         ChangeCollectableOrNot(droppedItem);
     }
@@ -215,7 +225,7 @@ public class PlayerController : MonoBehaviour
     public void DropAllItem(CollectableObjectController item, Vector3 spawnPoint)
     {
         Vector3 spawnLocation = transform.position;
-        CollectableObjectController droppedItem = m_CollectableObjectsPool.m_Pool[item.GetCollectableType()].Spawn(spawnPoint,null);//Instantiate(item, spawnLocation + spawnOffset, Quaternion.identity);
+        CollectableObjectController droppedItem = m_CollectableObjectsPool.m_Pool[item.GetCollectableType()].Spawn(spawnPoint,null, item);//Instantiate(item, spawnLocation + spawnOffset, Quaternion.identity);
         droppedItem.rb2d.AddForce((spawnPoint - spawnLocation) * 3f, ForceMode2D.Impulse);
         ChangeCollectableOrNot(droppedItem);
     }
@@ -243,7 +253,7 @@ public class PlayerController : MonoBehaviour
 
         Vector3 spawnPoint = RandomPointAheadPlayer(spawnLocation, 0.25f, 0.5f);
 
-        CollectableObjectController droppedItem = m_CollectableObjectsPool.m_Pool[item.GetCollectableType()].Spawn(spawnPoint,null);//Instantiate(item, spawnLocation + spawnOffset, Quaternion.identity);
+        CollectableObjectController droppedItem = m_CollectableObjectsPool.m_Pool[item.GetCollectableType()].Spawn(spawnPoint,null, item);//Instantiate(item, spawnLocation + spawnOffset, Quaternion.identity);
         droppedItem.rb2d.AddForce((spawnPoint - spawnLocation) * 3f, ForceMode2D.Impulse);
         ChangeCollectableOrNot(droppedItem);
     }
@@ -263,7 +273,7 @@ public class PlayerController : MonoBehaviour
     public void DropAllFromObject(CollectableObjectController item, Vector3 spawnPoint, GameObject obj)
     {
         Vector3 spawnLocation = obj.transform.position;
-        CollectableObjectController droppedItem = m_CollectableObjectsPool.m_Pool[item.GetCollectableType()].Spawn(spawnPoint,null);//Instantiate(item, spawnLocation + spawnOffset, Quaternion.identity);
+        CollectableObjectController droppedItem = m_CollectableObjectsPool.m_Pool[item.GetCollectableType()].Spawn(spawnPoint,null, item);//Instantiate(item, spawnLocation + spawnOffset, Quaternion.identity);
         droppedItem.rb2d.AddForce((spawnPoint - spawnLocation) * 2.5f, ForceMode2D.Impulse);
         ChangeCollectableOrNot(droppedItem);
     }

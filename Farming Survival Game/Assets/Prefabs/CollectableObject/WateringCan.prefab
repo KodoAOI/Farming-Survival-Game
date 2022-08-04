@@ -146,9 +146,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9bedae395a3e9f4a9dacb581f13eb84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Type: 7
-  m_MaxStack: 16
-  m_Action: 5
+  IsTool: 1
+  m_Information: {fileID: 11400000, guid: 6501c7d454083b247b8f0dd7816194a4, type: 2}
   Icon: {fileID: 21300000, guid: 0406b88d1946fc94b9d439aa2e561b75, type: 3}
+  CollectableOrNot: 0
   rb2d: {fileID: 0}
   GetCollideWith: {fileID: 0}

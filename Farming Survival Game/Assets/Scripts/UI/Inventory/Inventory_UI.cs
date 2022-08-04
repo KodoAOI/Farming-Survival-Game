@@ -84,4 +84,15 @@ public class Inventory_UI : MonoBehaviour
         }
         Setup(true);
     }
+
+    private void Update() { //?? tk nao ko update de ra 1 dong bug ??
+        var m_Inventory = m_Player.GetInventoryController();
+        for(int i = 0; i < m_Inventory.NumSlots; i++)
+        {
+            var slot = m_Inventory.Slots[i];
+            if(slot.m_CollectableObject != null)
+                slot.m_Durability = slot.m_CollectableObject.GetCurrDurability();
+            slots[i].SetDurability(slot.m_Durability);  
+        }
+    }
 }

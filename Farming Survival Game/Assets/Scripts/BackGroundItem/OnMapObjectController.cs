@@ -30,7 +30,7 @@ public class OnMapObjectController : MonoBehaviour
         foreach(CollectableObjectController item in ItemsDropper)
         {
             item.ResetAttribute();
-            Vector3 SpawnOffset = UnityEngine.Random.insideUnitCircle * 0.1f; 
+            Vector3 SpawnOffset = UnityEngine.Random.insideUnitCircle * 0.1f;
             m_Player.DropAllFromObject(item, SpawnPoint + SpawnOffset, gameObject);
             
             // Vector3 spawnLocation = transform.position;

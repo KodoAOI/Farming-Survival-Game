@@ -30,8 +30,9 @@ public class InventoryController : MonoBehaviour
             }
         }
 
-        foreach(var slot in Slots)
+        for(int i = 0; i < NumSlots; i++)
         {
+            var slot = Slots[i];
             if(slot.m_CollectableObject != null)
                 slot.m_Durability = slot.m_CollectableObject.GetCurrDurability();
         }

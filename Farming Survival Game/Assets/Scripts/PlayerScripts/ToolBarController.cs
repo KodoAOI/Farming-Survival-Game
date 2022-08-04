@@ -20,7 +20,6 @@ public class ToolBarController : MonoBehaviour
     void Start()
     {
         m_Inventory = m_Player.GetInventoryController();
-        print(m_Player.GetInventoryController().Slots.Count);
         for(int i = 0; i < m_MaxToolSlot; i++)
         {
             m_Slots.Add(m_Inventory.Slots[i]);
@@ -39,7 +38,8 @@ public class ToolBarController : MonoBehaviour
     {
         for(int i = 0; i < m_MaxToolSlot; i++)
         {
-           
+            m_Slots[i] = m_Inventory.Slots[i];
+            m_Inventory.Slots[i].m_Durability = m_Slots[i].m_Durability;
             if(m_Player.GetInventoryController().Slots.Count > 0 && m_Player.GetInventoryController().Slots[i].Type == CollectableType.NONE)
                 m_Slots[i].ClearItem();
             m_SlotUI[i].SetItem(m_Slots[i]);
@@ -92,9 +92,10 @@ public class ToolBarController : MonoBehaviour
         }
         if(Input.GetKeyDown(KeyCode.Q))
         {
-            CollectableObjectController itemToDrop = m_Player.GetCurrItem().m_CollectableObject;
+            CollectableObjectController itemToDrop = ItemGameManager.instance.itemManager.GetItemByType(m_Slots[ActiveSlot].Type);
             if(itemToDrop != null)
             {
+                itemToDrop.SetDurability(m_Slots[ActiveSlot].m_Durability);
                 m_Player.DropItemAhead(itemToDrop);
                 m_Player.GetInventoryController().Remove(ActiveSlot);
                 m_InventoryUI.Setup(true);

@@ -41,12 +41,8 @@ public class CollectableObjectController : MonoBehaviour
         m_MaxStack = m_Information.Stack;
         IsTool = m_Information.IsTool;
         Icon = m_Information.Icon;
-
-        if(m_Information.ToolDurability > 0 && CurrDurability <= 0)
-        {
-            MaxDurability = m_Information.ToolDurability;
-            CurrDurability = m_Information.StartDurability;
-        }
+        MaxDurability = m_Information.ToolDurability;
+        CurrDurability = m_Information.StartDurability;
         CollectableOrNot = true;
     }
     public CollectableType GetCollectableType()
@@ -103,7 +99,7 @@ public class CollectableObjectController : MonoBehaviour
     {
         if(IsTool)
         {
-            gameObject.SetActive(false);
+            // gameObject.SetActive(false);
             Destroy(gameObject);
         }
         else m_Pool.Release(this);

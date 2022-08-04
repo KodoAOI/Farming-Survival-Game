@@ -19,7 +19,9 @@ public class CollectableObjectPool
         if(item.IsTool)
         {
             m_NewObj = GameObject.Instantiate(m_Object);
-            m_NewObj.ResetAttribute();
+            m_NewObj.transform.position = Position;
+            if(item.GetCurrDurability() < 0)m_NewObj.ResetAttribute();
+            else m_NewObj.SetDurability(item.GetCurrDurability());
             m_NewObj.transform.SetParent(Parent);
         }
         else if(m_InactiveObject.Count <= 0)

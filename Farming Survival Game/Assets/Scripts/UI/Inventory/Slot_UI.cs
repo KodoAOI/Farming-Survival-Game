@@ -115,6 +115,7 @@ public class Slot_UI : MonoBehaviour, IDropHandler
 
     public void OnClick1()
     {
+        if(m_ObjectInformationPanel.m_SlotIdx == -1)    return;
         if(m_ItemIcon.sprite != null)
         {
             m_CloneSlot.gameObject.SetActive(true);
@@ -130,6 +131,7 @@ public class Slot_UI : MonoBehaviour, IDropHandler
 
     public void OnDrop(PointerEventData eventData)
     {
+        if(m_ObjectInformationPanel.m_SlotIdx == -1)    return;
         // Debug.Log("OnDrop");
         if(eventData.pointerDrag != null)
         {

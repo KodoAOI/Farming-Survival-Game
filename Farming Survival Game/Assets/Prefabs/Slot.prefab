@@ -316,6 +316,10 @@ MonoBehaviour:
   m_FirstSlotPosition: {fileID: 0}
   m_Player: {fileID: 0}
   m_Durability: {fileID: 7038717395270110282}
+  m_Fill: {fileID: 2114322905225340671}
+  m_Border: {fileID: 4790655088626970887}
+  m_CloneFill: {fileID: 0}
+  m_CloneBorder: {fileID: 0}
   SlotIdx: 0
 --- !u!1 &3520182223037265057
 GameObject:

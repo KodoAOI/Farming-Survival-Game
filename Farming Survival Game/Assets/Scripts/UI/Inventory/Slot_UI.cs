@@ -15,6 +15,7 @@ public class Slot_UI : MonoBehaviour, IDropHandler
     [SerializeField] private Inventory_UI m_InventoryUI;
     [SerializeField] private Color m_Color;
     [SerializeField] private Image m_CloneSlot;
+    [SerializeField] private GameObject m_CloneDurability;
     [SerializeField] private ObjectInformationPanel m_ObjectInformationPanel;
     [SerializeField] private Transform m_FirstSlotPosition;
     [SerializeField] private PlayerController m_Player;
@@ -80,9 +81,9 @@ public class Slot_UI : MonoBehaviour, IDropHandler
         if(m_InventoryUI == null)
         {
             ShowTarget();
-            print(m_CurrDurability);
-            print(SlotIdx);
-            print(m_Player.GetInventoryController().Slots[SlotIdx].Type);
+            // print(m_CurrDurability);
+            // print(SlotIdx);
+            // print(m_Player.GetInventoryController().Slots[SlotIdx].Type);
             return;
         }
         foreach(Slot_UI slot in m_InventoryUI.slots)
@@ -121,6 +122,7 @@ public class Slot_UI : MonoBehaviour, IDropHandler
             obj.SetPosition(m_ObjectInformationPanel.m_SlotIdx);
             m_CloneSlot.sprite = m_ItemIcon.sprite;
             m_CloneSlot.color = m_ItemIcon.color;
+            m_CloneDurability = m_Durability.gameObject;
         }
     }
 

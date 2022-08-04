@@ -34,15 +34,16 @@ public class CollectableObjectController : MonoBehaviour
         m_Pool = FindObjectOfType<CollectableObjectsPool>().m_Pool[m_Type];
         rb2d = GetComponent<Rigidbody2D>();
     }
-    public void ResetAttribute()
+    public void ResetAttribute(bool ResetDurability)
     {
         m_Type = m_Information.Type;
         m_Action = m_Information.Action;
         m_MaxStack = m_Information.Stack;
         IsTool = m_Information.IsTool;
         Icon = m_Information.Icon;
-        MaxDurability = m_Information.ToolDurability;
-        CurrDurability = m_Information.StartDurability;
+        if(ResetDurability)
+            MaxDurability = m_Information.ToolDurability;
+            CurrDurability = m_Information.StartDurability;
         CollectableOrNot = true;
     }
     public CollectableType GetCollectableType()

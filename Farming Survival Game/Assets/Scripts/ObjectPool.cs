@@ -20,7 +20,7 @@ public class CollectableObjectPool
         {
             m_NewObj = GameObject.Instantiate(m_Object);
             m_NewObj.transform.position = Position;
-            if(item.GetCurrDurability() < 0)m_NewObj.ResetAttribute();
+            if(item.GetCurrDurability() < 0)m_NewObj.ResetAttribute(true);
             else m_NewObj.SetDurability(item.GetCurrDurability());
             m_NewObj.transform.SetParent(Parent);
         }
@@ -30,7 +30,6 @@ public class CollectableObjectPool
            m_NewObj.transform.position = Position;
            m_NewObj.transform.SetParent(Parent);
            m_NewObj.gameObject.SetActive(true);
-           m_NewObj.ResetAttribute();
            m_ActiveObject.Add(m_NewObj);
         }
         else
@@ -39,7 +38,6 @@ public class CollectableObjectPool
            m_NewObj.transform.position = Position;
            m_NewObj.transform.SetParent(Parent);
            m_NewObj.gameObject.SetActive(true);
-           m_NewObj.ResetAttribute();
            m_ActiveObject.Add(m_NewObj);
            m_InactiveObject.RemoveAt(0);
            

@@ -15010,11 +15010,11 @@ MonoBehaviour:
   PausePanel: {fileID: 900349055}
   MenuPanel: {fileID: 1869409928}
   PlayScreen: {fileID: 779477118}
-  ObjectPools: {fileID: 0}
+  ObjectPools: {fileID: 761180276}
   m_Player: {fileID: 1057887301}
   m_InventoryUI: {fileID: 1352694655}
   m_AtrributeUI: {fileID: 137664084}
-  m_DayNightSystem: {fileID: 0}
+  m_DayNightSystem: {fileID: 1807399461}
 --- !u!4 &605013168 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3123279933905353903, guid: c7871c99e06a4e1498522dfb7e5dafa8, type: 3}

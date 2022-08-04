@@ -18,16 +18,39 @@ public class Slot_UI : MonoBehaviour, IDropHandler
     [SerializeField] private ObjectInformationPanel m_ObjectInformationPanel;
     [SerializeField] private Transform m_FirstSlotPosition;
     [SerializeField] private PlayerController m_Player;
+    [SerializeField] private Slider m_Durability;
+    private InventoryController.Slot m_Slot;
 
     public int SlotIdx;
-
+    private int m_CurrDurability = -1;
+    public void SetDurability(int Durability)
+    {
+        m_CurrDurability = Durability;
+    }
+    public void Setup(InventoryController.Slot slot)
+    {
+        m_Slot = slot;
+        SetDurability(slot.m_Durability);
+        if(slot.m_CollectableObject != null)slot.m_CollectableObject.SetDurability(slot.m_Durability);
+        if(m_CurrDurability <= 0)m_Durability.gameObject.SetActive(false);
+        else
+        {
+            m_Durability.gameObject.SetActive(true);
+            m_Durability.value = (float)slot.m_Durability / (float)slot.m_MaxDurability * 100f;
+        }
+    }
     private void Update()
     {
         if(m_CloneSlot != null && m_CloneSlot.gameObject.activeSelf == true && m_ObjectInformationPanel.m_SlotIdx != -1 && m_Player.GetCollectableCount(m_ObjectInformationPanel.m_SlotIdx) == 0)
         {
             m_CloneSlot.GetComponent<DragDrop>().SetActiveFalse();
         }
-
+        if(m_CurrDurability <= 0)m_Durability.gameObject.SetActive(false);
+        else
+        {
+            m_Durability.gameObject.SetActive(true);
+            m_Durability.value = (float)m_Slot.m_Durability / (float)m_Slot.m_MaxDurability * 100f;
+        }
     }
     public void SetItem(InventoryController.Slot slot)
     {
@@ -36,6 +59,8 @@ public class Slot_UI : MonoBehaviour, IDropHandler
             m_ItemIcon.sprite = slot.m_Icon;
             m_ItemIcon.color = new Color(1, 1, 1, 1);
             m_QuantityText.text = slot.Count.ToString();
+            m_Slot = slot;
+            // if(slot.m_Durability != -1)print(slot.m_Durability);
         }
         // else SetEmpty();
     }
@@ -45,6 +70,7 @@ public class Slot_UI : MonoBehaviour, IDropHandler
         m_ItemIcon.sprite = null;
         m_ItemIcon.color = new Color(1, 1, 1, 0);
         m_QuantityText.text = "";
+        m_Slot = null;
     }
 
     public void OnClick()
@@ -54,6 +80,9 @@ public class Slot_UI : MonoBehaviour, IDropHandler
         if(m_InventoryUI == null)
         {
             ShowTarget();
+            print(m_CurrDurability);
+            print(SlotIdx);
+            print(m_Player.GetInventoryController().Slots[SlotIdx].Type);
             return;
         }
         foreach(Slot_UI slot in m_InventoryUI.slots)

@@ -160,9 +160,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9bedae395a3e9f4a9dacb581f13eb84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Type: 6
-  m_MaxStack: 1
-  m_Action: 2
+  IsTool: 1
+  m_Information: {fileID: 11400000, guid: 26d59b4ecc11b604d9ddde16278eff13, type: 2}
   Icon: {fileID: 21300000, guid: 56a34bc3f4b8ab044ac767d8c5c4e2c2, type: 3}
+  CollectableOrNot: 0
   rb2d: {fileID: 0}
   GetCollideWith: {fileID: 0}

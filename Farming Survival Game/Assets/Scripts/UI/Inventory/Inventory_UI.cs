@@ -12,7 +12,7 @@ public class Inventory_UI : MonoBehaviour
     public List<Slot_UI> slots = new List<Slot_UI>();
     // [SerializeField] private Button m_Button;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         // m_InventoryPanel.SetActive(false); // thang nao viet dong cua no nay vao day?
         for(int i = 0; i < slots.Count; i++)
@@ -42,6 +42,7 @@ public class Inventory_UI : MonoBehaviour
                 if(m_Player.GetCollectableType(i) != CollectableType.NONE)
                 {
                     slots[i].SetItem(m_Player.GetSlot(i));
+                    // slots[i].Setup(m_Player.GetInventoryController().Slots[i]);
                 }
                 else 
                 {
@@ -82,5 +83,16 @@ public class Inventory_UI : MonoBehaviour
             }
         }
         Setup(true);
+    }
+
+    private void Update() { //?? tk nao ko update de ra 1 dong bug ??
+        var m_Inventory = m_Player.GetInventoryController();
+        for(int i = 0; i < m_Inventory.NumSlots; i++)
+        {
+            var slot = m_Inventory.Slots[i];
+            if(slot.m_CollectableObject != null)
+                slot.m_Durability = slot.m_CollectableObject.GetCurrDurability();
+            slots[i].SetDurability(slot.m_Durability);  
+        }
     }
 }

@@ -2455,6 +2455,7 @@ MonoBehaviour:
   m_ObjectInformationPanel: {fileID: 0}
   m_FirstSlotPosition: {fileID: 0}
   m_Player: {fileID: 0}
+  m_Durability: {fileID: 0}
   SlotIdx: 0
 --- !u!114 &185525168
 MonoBehaviour:
@@ -3034,6 +3035,7 @@ MonoBehaviour:
   m_ObjectInformationPanel: {fileID: 0}
   m_FirstSlotPosition: {fileID: 0}
   m_Player: {fileID: 0}
+  m_Durability: {fileID: 0}
   SlotIdx: 0
 --- !u!114 &217487520
 MonoBehaviour:
@@ -7228,6 +7230,7 @@ MonoBehaviour:
   m_ObjectInformationPanel: {fileID: 0}
   m_FirstSlotPosition: {fileID: 0}
   m_Player: {fileID: 0}
+  m_Durability: {fileID: 0}
   SlotIdx: 0
 --- !u!114 &692599720
 MonoBehaviour:
@@ -8035,6 +8038,7 @@ MonoBehaviour:
   m_ObjectInformationPanel: {fileID: 0}
   m_FirstSlotPosition: {fileID: 0}
   m_Player: {fileID: 0}
+  m_Durability: {fileID: 0}
   SlotIdx: 0
 --- !u!114 &834438531
 MonoBehaviour:
@@ -8157,6 +8161,7 @@ MonoBehaviour:
   m_ObjectInformationPanel: {fileID: 0}
   m_FirstSlotPosition: {fileID: 0}
   m_Player: {fileID: 0}
+  m_Durability: {fileID: 0}
   SlotIdx: 0
 --- !u!114 &842525735
 MonoBehaviour:
@@ -9478,6 +9483,7 @@ MonoBehaviour:
   m_ObjectInformationPanel: {fileID: 0}
   m_FirstSlotPosition: {fileID: 0}
   m_Player: {fileID: 0}
+  m_Durability: {fileID: 0}
   SlotIdx: 0
 --- !u!114 &964260691
 MonoBehaviour:
@@ -9949,6 +9955,7 @@ MonoBehaviour:
   m_ObjectInformationPanel: {fileID: 0}
   m_FirstSlotPosition: {fileID: 0}
   m_Player: {fileID: 0}
+  m_Durability: {fileID: 0}
   SlotIdx: 0
 --- !u!1 &1021772119
 GameObject:
@@ -12782,6 +12789,7 @@ MonoBehaviour:
   m_ObjectInformationPanel: {fileID: 0}
   m_FirstSlotPosition: {fileID: 0}
   m_Player: {fileID: 0}
+  m_Durability: {fileID: 0}
   SlotIdx: 0
 --- !u!114 &1345363689
 MonoBehaviour:
@@ -25502,7 +25510,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29b3d16fde6520744bf4e0da15158967, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Inventory: {fileID: 1349567736}
   m_InventoryUI: {fileID: 1448361675}
   m_Player: {fileID: 1451103816}
   m_SlotUI:
@@ -25902,7 +25909,7 @@ GameObject:
   - component: {fileID: 1814673953}
   - component: {fileID: 1814673952}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: Time
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -26232,6 +26239,7 @@ MonoBehaviour:
   m_ObjectInformationPanel: {fileID: 0}
   m_FirstSlotPosition: {fileID: 0}
   m_Player: {fileID: 0}
+  m_Durability: {fileID: 0}
   SlotIdx: 0
 --- !u!114 &1861703761
 MonoBehaviour:

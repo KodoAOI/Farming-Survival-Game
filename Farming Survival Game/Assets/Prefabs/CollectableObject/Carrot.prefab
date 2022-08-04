@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3123279933905353890}
   - component: {fileID: 3123279933905353902}
   m_Layer: 0
-  m_Name: CollectableObject
+  m_Name: Carrot
   m_TagString: CollectableObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -149,6 +149,8 @@ MonoBehaviour:
   m_Type: 1
   m_MaxStack: 16
   m_Action: 0
+  m_Information: {fileID: 11400000, guid: ef44e390d5ebde346b9d32dc9665ec00, type: 2}
   Icon: {fileID: -1827429619, guid: 027f9bb55f2632949815e6c83352a0df, type: 3}
+  CollectableOrNot: 0
   rb2d: {fileID: 0}
   GetCollideWith: {fileID: 0}

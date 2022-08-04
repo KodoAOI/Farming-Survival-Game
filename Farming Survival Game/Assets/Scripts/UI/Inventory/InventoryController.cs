@@ -29,6 +29,13 @@ public class InventoryController : MonoBehaviour
                 m_TransparentObject.gameObject.SetActive(false);
             }
         }
+
+        for(int i = 0; i < NumSlots; i++)
+        {
+            var slot = Slots[i];
+            if(slot.m_CollectableObject != null)
+                slot.m_Durability = slot.m_CollectableObject.GetCurrDurability();
+        }
     }
 
     public class Slot
@@ -38,12 +45,17 @@ public class InventoryController : MonoBehaviour
         public CollectableType Type;
         public Sprite m_Icon;
         public Action m_Action;
+        public int m_Durability;
+        public int m_MaxDurability;
+        public CollectableObjectController m_CollectableObject;
         public Slot()
         {
             Count = 0;
             MaxCount = 0;
             Type = CollectableType.NONE;
             m_Action = Action.None;
+            m_Durability = -1;
+            m_MaxDurability = -1;
         }
 
         public void Add(CollectableObjectController Object)
@@ -52,6 +64,10 @@ public class InventoryController : MonoBehaviour
             m_Icon = Object.Icon;
             MaxCount = Object.GetStack();
             m_Action = Object.GetAction();
+            if(Object.GetCurrDurability() > 0) m_Durability = Object.GetCurrDurability();
+            else m_Durability = Object.m_Information.StartDurability;
+            m_MaxDurability = Object.m_Information.ToolDurability;
+            m_CollectableObject = Object;
             Count++;
         }
         
@@ -60,13 +76,17 @@ public class InventoryController : MonoBehaviour
             if(Count > 0)
             {
                 Count--;
-
-                if(Count == 0)
-                {
-                    m_Icon = null;
-                    Type = CollectableType.NONE;
-                }
+                if(Count == 0)ClearItem();
             }
+        }
+
+        public void ClearItem()
+        {
+            m_Icon = null;
+            Type = CollectableType.NONE;
+            m_Durability = -1;
+            m_MaxDurability = -1;
+            m_CollectableObject = null;
         }
     }
 
@@ -74,15 +94,14 @@ public class InventoryController : MonoBehaviour
     
     void Awake()
     {
+        print(NumSlots);
         for(int i = 0; i < NumSlots; i++)
         {
             Slot slot = new Slot();
             Slots.Add(slot);
         }
     }
-    private void Start() {
-        print(Slots.Count);
-    }
+
     public void Add(CollectableObjectController Object)
     {
         bool Flag = false;

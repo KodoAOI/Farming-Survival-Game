@@ -1,13 +1,17 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class CollectableObjectController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    [SerializeField] private CollectableType m_Type;
-    [SerializeField] private int m_MaxStack;
-    [SerializeField] private Action m_Action;
+    private CollectableType m_Type;
+    private int m_MaxStack;
+    private Action m_Action;
+    private int MaxDurability = -1;
+    private int CurrDurability = -1;
+    public bool IsTool;
+    public CollectableObjectInformation m_Information;
     public CollectableObjectPool m_Pool;
     public Sprite Icon;
     public bool CollectableOrNot;
@@ -15,14 +19,35 @@ public class CollectableObjectController : MonoBehaviour
 
     private void Awake()
     {
+        m_Type = m_Information.Type;
+        m_Action = m_Information.Action;
+        m_MaxStack = m_Information.Stack;
+        IsTool = m_Information.IsTool;
+        Icon = m_Information.Icon;
+
+        if(m_Information.ToolDurability > 0)
+        {
+            MaxDurability = m_Information.ToolDurability;
+            CurrDurability = m_Information.StartDurability;
+        }
         CollectableOrNot = true;
         m_Pool = FindObjectOfType<CollectableObjectsPool>().m_Pool[m_Type];
         rb2d = GetComponent<Rigidbody2D>();
     }
-
+    public void ResetAttribute()
+    {
+        m_Type = m_Information.Type;
+        m_Action = m_Information.Action;
+        m_MaxStack = m_Information.Stack;
+        IsTool = m_Information.IsTool;
+        Icon = m_Information.Icon;
+        MaxDurability = m_Information.ToolDurability;
+        CurrDurability = m_Information.StartDurability;
+        CollectableOrNot = true;
+    }
     public CollectableType GetCollectableType()
     {
-        return m_Type;
+        return m_Information.Type;
     }
 
     public void Setter()
@@ -32,7 +57,17 @@ public class CollectableObjectController : MonoBehaviour
     
     void Start()
     {
-        
+       
+    }
+
+    public int GetCurrDurability()
+    {
+        return CurrDurability;
+    }
+
+    public void SetDurability(int Durability)
+    {
+        CurrDurability = Durability;
     }
 
     private void ChangeCollectableOrNot()
@@ -46,10 +81,9 @@ public class CollectableObjectController : MonoBehaviour
         Invoke("ChangeCollectableOrNot", 1.25f);
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+       
     }
 
     public Collider2D GetCollideWith;
@@ -63,7 +97,12 @@ public class CollectableObjectController : MonoBehaviour
 
     public void SelfDestroy()
     {
-        m_Pool.Release(this);
+        if(IsTool)
+        {
+            // gameObject.SetActive(false);
+            Destroy(gameObject);
+        }
+        else m_Pool.Release(this);
     }
 
     private void OnTriggerExit2D(Collider2D other) {

@@ -56,6 +56,7 @@ public class Inventory_UI : MonoBehaviour
     {
         if(m_ObjectInformationPanel.m_SlotIdx == -1)    return;
         CollectableObjectController itemToDrop = ItemGameManager.instance.itemManager.GetItemByType(m_Player.GetCollectableType(m_ObjectInformationPanel.m_SlotIdx));
+        itemToDrop.SetDurability(m_Player.GetInventoryController().Slots[m_ObjectInformationPanel.m_SlotIdx].m_Durability);
 
         if(itemToDrop != null && m_ObjectInformationPanel.m_SlotIdx != -1)
         {

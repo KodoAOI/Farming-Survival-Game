@@ -9,6 +9,7 @@ public class Inventory_UI : MonoBehaviour
     [SerializeField] PlayerController m_Player;
     [SerializeField] ObjectInformationPanel m_ObjectInformationPanel;
     [SerializeField] Color m_Color;
+    [SerializeField] private Image m_CloneIcon;
     public List<Slot_UI> slots = new List<Slot_UI>();
     // [SerializeField] private Button m_Button;
     // Start is called before the first frame update
@@ -50,6 +51,7 @@ public class Inventory_UI : MonoBehaviour
                 }
             }
         }
+        // m_CloneIcon.gameObject.SetActive(false);
     }
 
     public void Remove() // who am I

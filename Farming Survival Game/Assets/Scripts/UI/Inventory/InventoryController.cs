@@ -94,7 +94,7 @@ public class InventoryController : MonoBehaviour
     
     void Awake()
     {
-        print(NumSlots);
+        // print(NumSlots);
         for(int i = 0; i < NumSlots; i++)
         {
             Slot slot = new Slot();
@@ -151,5 +151,6 @@ public class InventoryController : MonoBehaviour
         Slot tmp = Slots[idx1];
         Slots[idx1] = Slots[idx2];
         Slots[idx2] = tmp;
+        m_InventoryUI.Setup(false);
     }
 }

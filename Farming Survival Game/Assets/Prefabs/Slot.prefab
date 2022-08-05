@@ -244,8 +244,8 @@ RectTransform:
   m_Children:
   - {fileID: 3520182222205151734}
   - {fileID: 3520182223037265056}
-  - {fileID: 110069002614433010}
   - {fileID: 6588682043384683561}
+  - {fileID: 110069002614433010}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -317,6 +317,8 @@ MonoBehaviour:
   m_Player: {fileID: 0}
   m_Durability: {fileID: 7038717395270110282}
   m_CloneDurability: {fileID: 0}
+  m_CloneQuantityText: {fileID: 0}
+  m_Inventory: {fileID: 0}
   SlotIdx: 0
 --- !u!1 &3520182223037265057
 GameObject:
@@ -427,7 +429,7 @@ RectTransform:
   m_Children:
   - {fileID: 5202843014450026100}
   m_Father: {fileID: 3520182223021663890}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -807,7 +809,7 @@ RectTransform:
   - {fileID: 8040683068688137538}
   - {fileID: 7850287173263477672}
   m_Father: {fileID: 3520182223021663890}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -853,7 +855,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 8040683068688137538}
   m_HandleRect: {fileID: 0}

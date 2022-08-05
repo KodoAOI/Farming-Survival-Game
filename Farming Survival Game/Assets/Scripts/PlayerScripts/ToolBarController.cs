@@ -33,7 +33,7 @@ public class ToolBarController : MonoBehaviour
     {
         return OldActiveSlot;
     }
-    // Update is called once per frame
+
     public void Setup()
     {
         for(int i = 0; i < m_MaxToolSlot; i++)
@@ -44,7 +44,7 @@ public class ToolBarController : MonoBehaviour
                 m_Slots[i].ClearItem();
             m_SlotUI[i].SetItem(m_Slots[i]);
             if(m_Slots[i].Type == CollectableType.NONE) m_SlotUI[i].GetImage().color = new Color(1, 1, 1, 0);
-            if(m_Slots[i].Count == 0)m_SlotUI[i].GetText().text = "";
+            if(m_Slots[i].Count == 0 || m_Slots[i].m_Durability > 0)m_SlotUI[i].GetText().text = "";
             m_SlotUI[i].Setup(m_Slots[i]);
         }
     }
@@ -83,10 +83,7 @@ public class ToolBarController : MonoBehaviour
             {   
                 ActiveSlot = Math.Min(-(int)Scroll.y + i, m_MaxToolSlot - 1);
                 ActiveSlot = Math.Max(ActiveSlot, 0);
-                if(OldActiveSlot != ActiveSlot || m_Player.GetCurrItem() == null)
-                {
-                    m_Player.SetItemOnHand(m_Slots[i]);
-                }
+                m_Player.SetItemOnHand(m_Slots[i]);
                 break;
             }
         }

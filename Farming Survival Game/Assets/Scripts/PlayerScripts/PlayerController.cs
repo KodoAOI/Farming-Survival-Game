@@ -87,18 +87,18 @@ public class PlayerController : MonoBehaviour
                         var Position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                         if(m_Action == Action.Hoe && m_PlayerActionController.CanCrop())
                         {
-                            m_AttributeUIController.MakeProgressBar(2.0f);
+                            m_AttributeUIController.MakeProgressBar(0.2f);
                             m_AttributeUIController.SetAction(m_Action);
                             m_PlayerActionController.SetCropPosition(Position);
                         }
                         else if(m_Action == Action.Cut && m_PlayerActionController.CanCut)
                         {
-                            m_AttributeUIController.MakeProgressBar(2.0f);
+                            m_AttributeUIController.MakeProgressBar(0.2f);
                             m_AttributeUIController.SetAction(m_Action);
                         }
                         else if(m_Action == Action.Water && m_PlayerActionController.CanWater())
                         {
-                            m_AttributeUIController.MakeProgressBar(2.0f);
+                            m_AttributeUIController.MakeProgressBar(0.2f);
                             m_AttributeUIController.SetAction(m_Action);
                             m_PlayerActionController.SetCropPosition(Position);
                         }

@@ -6,7 +6,7 @@ TextureImporter:
   serializedVersion: 11
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -51,9 +51,9 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -23216,16 +23216,16 @@ TextureImporter:
       Overworld_817: -758914133
       Overworld_1036: -1217455210
       Overworld_502: 1783614327
+      Overworld_446: 861872145
       Overworld_866: -369326782
+      Overworld_452: -642260634
       Overworld_303: 648821884
       Overworld_1052: 1689807640
-      Overworld_446: 861872145
-      Overworld_317: 1355700085
       Overworld_396: -730701059
+      Overworld_317: 1355700085
       Overworld_569: -1578098728
       Overworld_647: 1005770638
       Overworld_421: 817847861
-      Overworld_452: -642260634
       Overworld_940: -2026166578
       Overworld_863: 1632286610
       Overworld_587: 457131151
